@@ -2,8 +2,8 @@
 
 2020.10.04
 
-###수정할 내용
-  ####index.html
+### 수정할 내용
+  #### index.html
   1. header
     - 서브메뉴 JS적용
   2. main
