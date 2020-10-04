@@ -1,0 +1,360 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+/* main#main 영역 시작 */
+main#main {
+  height: 490px;
+  
+  position: relative;
+}
+  /* slide-img 영역 시작 */
+#main #main-slide-img {
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  
+  position: relative;
+}
+
+#main-slide-img #main-slide-shuttle-frame {
+  width: 5800px;
+  height: 440px;
+  
+  position: absolute;
+}
+
+#main-slide-img #main-slide-shuttle-frame a{
+  width: 1920px;
+  height: 440px;
+  float: left;
+  
+}
+  /* slide-img 영역 끝 */
+  /* quick-link(매장찾기, 가맹신청문의) 영역 시작 */
+#quick-link {
+  width: 600px;
+  height: 80px;
+  display: flex;
+  
+  position: absolute;
+  bottom: 0;
+  right: 360px;
+}
+
+#quick-link #find-shop {
+  width: 300px;
+  height: 80px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 30px 0 0 0;
+  background-color: #ffce32;
+
+  display: inline-block;
+}
+
+#quick-link #find-shop img{
+  width: 34px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+#quick-link #join-member {
+  width: 300px;
+  height: 80px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 0 0 30px 0;
+  background-color: #009223;
+  
+  display: inline-block;
+}
+
+#quick-link #join-member img{
+  width: 34px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+  /* quick-link(매장찾기, 가맹신청문의) 영역 시작 */
+/* main#main 영역 끝 */
+/* section#subway-menu 영역 시작 */
+section#subway-menu {
+  width: 1280px;
+  height: 620px;
+  padding: 60px 0 0 0;
+  margin: 0 auto;
+  
+  position: relative;
+}
+
+#subway-menu-gnb {
+  width: 450px;
+  color: #ccc;
+  display: flex;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+#subway-menu-gnb li a {
+  color: #666;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 20px;
+  
+  display: inline-block;
+}
+
+#subway-menu-gnb li:first-child a {
+  color: #009223;
+}
+
+#subway-menu-gnb li a:hover {
+  cursor: pointer;
+}
+
+  /* subway-menu의 slide 시작 */
+.subway-menu-slide {
+  width: 1280px;    
+  overflow: hidden;
+}
+
+.subway-menu-slide .subway-menu-slide-shuttle-frame{
+  width: 2600px;
+  display: flex;
+
+}
+.subway-menu-slide-wrap {
+  width: 1280px;
+  display: flex;
+}
+.subway-menu-slide-wrap a {
+  width: 270px;
+  height: 320px;
+  text-align: center;
+  margin: 0 25px;
+  display: inline-block;
+}
+
+
+/* js 구현시 다시 할 것!!! */
+
+
+/* a에 hover시 적용시킬 class */
+.subway-menu-slide-wrap .scale-active {
+  width: 350px;
+  text-align: center;
+  margin: 30px;
+  transform: scale(1.3);
+  position: relative;
+}
+/* p에 hover시 적용시킬 class */
+.subway-menu-slide-wrap a .none {
+  display: none;
+}
+/* a에 hover시 나타날 img */
+.subway-menu-slide-wrap a .seemore-icon {
+  background-image: url("/asset/images/index/see.png");
+  display: none;
+}
+
+
+/* js 구현시 다시 할 것!!! */
+
+
+.subway-menu-slide-wrap a img{
+  width: 260px;
+  height: 182px;
+}
+
+.subway-menu-slide-wrap a p {
+  width: 260px;
+  color: #aaaaaa;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+  /* subway-menu의 slide 끝 */
+
+
+
+/* section#subway-menu 영역 끝 */
+/* section#subway 영역 시작 */
+section#subway {
+  width: 100%;
+  background-color: #f3f3f3;
+  
+}
+#subway #subway-container {
+  width: 1280px;
+  height: 790px;
+  padding: 80px 20px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#subway .subway-box {
+  height: 300px;
+  padding: 40px;
+
+  position: relative;
+}
+
+#subway .subway-box h1{
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#subway .subway-btn {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 20px;
+  border: 2px solid #fff;
+  background-color: rgba(255,255,255,0);
+  border-radius: 20px;
+
+  position: absolute;
+  bottom: 40px;
+}
+
+#subway #subway-box1 {
+  width: 400px;
+  border-radius: 30px 0 30px 30px;
+  background-color: #01a5e2;
+}
+
+#subway #subway-box2 {
+  width: 825px;
+  border-radius: 30px 0 30px 0;
+  background-color: #ff8300;
+}
+
+#subway #subway-box2>* {
+  margin-left: 400px;
+}
+
+#subway #subway-box3 {
+  width: 950px;
+  border-radius: 30px 0 30px 0;
+  background-color: #fff;
+
+  display: flex;
+}
+
+#subway-box3 #subway-box3-title {
+  width: 340px;
+  height: 220px;
+
+  position: relative;
+}
+
+#subway-box3-title .title {
+  height: 80px;
+  margin-top: 20px;
+}
+#subway-box3-title .title .title-icon{
+  width: 80px;
+}
+
+#subway-box3-title .title .title-name{
+  color: #333;
+  font-size: 30px;
+  font-family: 'Kanit', sans-serif;
+  position: absolute;
+  top: 26px;
+  left: 70px;
+  z-index: 2;
+}
+
+#subway-box3-title .title p {
+  width: 200px;
+  color: #666;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 10px;
+}
+
+#subway-box3 #subway-box3-list {
+  width: 560px;
+  height: 220px;
+  padding: 30px 80px;
+}
+
+#subway-box3 #subway-box3-list li a{
+  color: #000;
+  font-size: 15px;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+#subway-box3 #subway-box3-list #subway-box3-btn{
+  color: #aaa;
+  font-size: 15px;
+  border: none;
+  margin-top: 20px;
+  background-color: rgba(255,255,255,0);
+}
+
+#subway #subway-box4 {
+  width: 270px;
+  border-radius:  0 30px 0 30px;
+  background-color: #58513f;
+}
+/* section#subway 영역 끝 */
+
+/* div#quick-menu 영역 시작 */
+#quick-menu {
+  width: 1280px;
+  height: 70px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#quick-menu .quick-menu-box {
+  width: 264px;
+  padding-left: 50px;
+  display: flex;
+}
+
+#quick-menu .quick-menu-box img{
+  width: 70px;
+  padding: 10px;
+  border-radius: 70px;
+  background-color: #f3f3f3;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.quick-menu-box .quick-menu-content {
+  height: 70px;
+  margin-left: 10px;
+}
+
+.quick-menu-box .quick-menu-content h4{
+  color: #333333;
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+
+.quick-menu-box .quick-menu-content p{
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* div#quick-menu 영역 끝 */
+
+
+
+
+
