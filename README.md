@@ -6,7 +6,7 @@
 
   ### index.html
     1. header
-      - 서브메뉴 JS적용
+      - submenu를 mouse관련 event 시, mainmenu와 hover 연동 및 해제
       
     2. main
       - 슬라이드 버튼 클릭시 해당 이미지로 이동
