@@ -98,6 +98,10 @@ section#subway-menu {
   position: absolute;
   top: 100px;
   right: 0;
+  z-index: 2;
+}
+#subway-menu-gnb li:nth-child(even) {
+  margin-top: 5px;
 }
 
 #subway-menu-gnb li a {
@@ -105,29 +109,48 @@ section#subway-menu {
   font-size: 15px;
   font-weight: bold;
   padding: 4px 20px;
-  
+
   display: inline-block;
+  cursor: pointer;
 }
 
 #subway-menu-gnb li:first-child a {
   color: #009223;
 }
 
-#subway-menu-gnb li a:hover {
-  cursor: pointer;
+.subway-menu-gnb-active {
+  color: #009223;
 }
 
   /* subway-menu의 slide 시작 */
 .subway-menu-slide {
-  width: 1280px;    
+  width: 1280px;   
+  height: 320px; 
+
   overflow: hidden;
+  position: relative;
 }
 
-.subway-menu-slide .subway-menu-slide-shuttle-frame{
+.subway-menu-slide .subway-menu-slide-shuttle-frame {
   width: 2600px;
   display: flex;
-
+  position: absolute;
 }
+.subway-menu-slide #classic-subway-menu-slide-shuttle-frame {
+  margin-left: 0;
+}
+.subway-menu-slide #fresh-N-light-subway-menu-slide-shuttle-frame {
+  margin-left: 1280px;
+}
+
+.subway-menu-slide #premium-subway-menu-slide-shuttle-frame {
+  margin-left: 1280px;
+}
+
+.subway-menu-slide #breakfast-subway-menu-slide-shuttle-frame {
+  margin-left: 1280px;
+}
+
 .subway-menu-slide-wrap {
   width: 1280px;
   display: flex;
@@ -138,32 +161,40 @@ section#subway-menu {
   text-align: center;
   margin: 0 25px;
   display: inline-block;
+
+  position: relative;
 }
 
+.subway-menu-slide-wrap a p+img{
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 60px;
+  background-color: #ffce32;
+  display: inline-block;
 
-/* js 구현시 다시 할 것!!! */
+  position: absolute;
+  top: 120px;
+  left: 100px;
 
+  display: none;
+
+
+}
 
 /* a에 hover시 적용시킬 class */
-.subway-menu-slide-wrap .scale-active {
+.scale-active {
   width: 350px;
   text-align: center;
-  margin: 30px;
+  margin: 30px 0;
   transform: scale(1.3);
   position: relative;
 }
 /* p에 hover시 적용시킬 class */
-.subway-menu-slide-wrap a .none {
-  display: none;
-}
-/* a에 hover시 나타날 img */
-.subway-menu-slide-wrap a .seemore-icon {
-  background-image: url("/asset/images/index/see.png");
+.none {
   display: none;
 }
 
-
-/* js 구현시 다시 할 것!!! */
 
 
 .subway-menu-slide-wrap a img{
@@ -224,6 +255,8 @@ section#subway {
 
   position: absolute;
   bottom: 40px;
+
+  cursor: pointer;
 }
 
 #subway #subway-box1 {
@@ -235,7 +268,11 @@ section#subway {
 #subway #subway-box2 {
   width: 825px;
   border-radius: 30px 0 30px 0;
-  background-color: #ff8300;
+  /* background-color: #ff8300; */
+  background-image: url("../images/index/box2_background.png");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  
 }
 
 #subway #subway-box2>* {
@@ -291,25 +328,56 @@ section#subway {
 }
 
 #subway-box3 #subway-box3-list li a{
-  color: #000;
+  color: #333;
   font-size: 15px;
+  font-weight: bold;
   padding: 10px 0;
   display: inline-block;
 }
 
+#subway-box3 #subway-box3-list li a:hover{
+  color: #009223;
+  text-decoration: underline;
+}
 #subway-box3 #subway-box3-list #subway-box3-btn{
   color: #aaa;
   font-size: 15px;
   border: none;
   margin-top: 20px;
   background-color: rgba(255,255,255,0);
+
+  cursor: pointer;
 }
 
 #subway #subway-box4 {
   width: 270px;
+  padding: 0;
   border-radius:  0 30px 0 30px;
   background-color: #58513f;
+  overflow: hidden;
+  position: relative;
 }
+
+#subway-box4 #subway-box4-slide-shuttle-frame {
+  width: 550px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#subway-box4-slide-shuttle-frame #subway-box4-slide-img1 {
+  z-index: 2;
+}
+
+#subway-box4-slide-shuttle-frame #subway-box4-slide-img2 {
+  z-index: 1;
+}
+
+#subway-box4 .bx-btn {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+
 /* section#subway 영역 끝 */
 
 /* div#quick-menu 영역 시작 */
@@ -325,6 +393,7 @@ section#subway {
   width: 264px;
   padding-left: 50px;
   display: flex;
+  cursor: pointer;
 }
 
 #quick-menu .quick-menu-box img{
