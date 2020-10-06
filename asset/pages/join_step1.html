@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/join_step1.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script defer src="../script/jquery-3.5.1.min.js"></script>
+  <script defer src="../script/common.js"></script>
+  <script defer src="../script/join_step1.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div id="header-logo">
+        <a href="#">
+          <img src="../images/index/header_logo.png" alt="헤더로고">
+      </a>  
+      </div>
+      <div id="sign-up">
+        <ul>
+          <li>
+            <a href="#">
+              로그인
+            </a>
+        </li>
+          <li>
+            <a href="#">
+              회원가입
+            </a>
+        </li>
+          <li>
+            <a href="#">
+              <img src="../images/index/earth.jpg" alt="지구" width="24">
+            </a>
+        </li>
+        </ul>
+      </div>
+      <nav id="gnb">
+        <ul id="main-menu">
+          <li><a href="#">메뉴소개</a></li>
+          <li><a href="#">이용방법</a></li>
+          <li><a href="#">새소식</a></li>
+          <li><a href="#">써브웨이</a></li>
+          <li><a href="#">가맹점</a></li>
+          <li><a href="#">온라인 주문</a></li>
+        </ul>
+      </nav>
+        
+        <nav id="sub-menu">
+          <div id="sub-menu-container">
+            <ul class="sub-menu">
+              <li><a href="#">샌드위치</a></li>
+              <li><a href="#">랩</a></li>
+              <li><a href="#">찹샐러드</a></li>
+              <li><a href="#">스마일 썹</a></li>
+              <li><a href="#">단체메뉴</a></li>
+            </ul>
+            <ul class="sub-menu">
+              <li><a href="#">써브웨이 이용방법</a></li>
+              <li><a href="#">단체메뉴 이용방법</a></li>
+              <li><a href="#">신선한 재료 소개</a></li>
+              <li><a href="#">App 이용방법</a></li>
+            </ul>
+            <ul class="sub-menu">
+              <li><a href="#">이벤트·프로모션</a></li>
+              <li><a href="#">뉴스·공지사항</a></li>
+              <li><a href="#">광고영상</a></li>
+            </ul>
+            <ul class="sub-menu">
+              <li><a href="#">써브웨이 역사</a></li>
+              <li><a href="#">써브웨이 약속</a></li>
+              <li><a href="#">샌드위치 아티스트 지원</a></li>
+              <li><a href="#">매장찾기</a></li>
+            </ul>
+            <ul class="sub-menu">
+              <li><a href="#">써브웨이 프랜차이즈</a></li>
+              <li><a href="#">가맹관련 FAQ</a></li>
+              <li><a href="#">가맹신청·문의</a></li>
+              <li><a href="#">지사안내</a></li>
+              <li><a href="#">사업설명회</a></li>
+            </ul>
+            <ul class="sub-menu">
+              <li><a href="#">FAST-SUB</a></li>
+              <li><a href="#">HOME-SUB</a></li>
+              <li><a href="#">단체주문</a></li>
+            </ul>
+          </div>
+        </nav>       
+    </header>
+
+    <main id="main">
+      <h1 class="sub-title">회원가입</h1>
+      <div class="join-step">
+        <ul>
+          <li><img src="../images/join/step1.png" alt="스텝1" width="80"></li>
+          <li><img src="../images/join/yellow_dot.png" alt="노란점선" width="80"></li>
+          <li><img src="../images/join/step2.png" alt="스텝2" width="80"></li>
+          <li><img src="../images/join/gray_dot.png" alt="회색점선" width="80"></li>
+          <li><img src="../images/join/step3.png" alt="스텝3" width="80"></li>
+          <li><img src="../images/join/gray_dot.png" alt="회색점선" width="80"></li>
+          <li><img src="../images/join/step4.png" alt="스텝4" width="80"></li>
+        </ul>
+      </div>
+
+      <div class="join-title">
+        Step1. <strong>약관동의</strong>
+      </div>
+      <div class="join">
+        <div class="agree">
+          <label class="chkbox">
+            <input type="checkbox" name="all-agree" id="all-agree" class="agree-chkbox" onclick="fnAllChk()">
+            <span class="checkmark"></span>
+            <strong>약관 전체 동의</strong>
+          </label>
+        </div>
+
+        <div class="agree">
+          <label class="chkbox">
+            <input type="checkbox" name="homepage-agree" id="homepage-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
+            <span class="checkmark"></span>
+            <span class="require">(필수)</span>
+            홈페이지 이용약관 동의
+          </label>
+          <iframe src="homepage_agree.html" frameborder="0" class="require-iframe"></iframe>
+        </div>
+
+        <div class="agree">
+          <label class="chkbox">
+            <input type="checkbox" name="personal-agree" id="personal-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
+            <span class="checkmark"></span>
+            <span class="require">(필수)</span>
+            개인정보 수집 및 이용동의
+          </label>
+          <iframe src="personal_agree.html" frameborder="0" class="require-iframe"></iframe>
+        </div>
+
+        <div class="agree">
+          <label class="chkbox">
+            <input type="checkbox" name="subcard-agree" id="subcard-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
+            <span class="checkmark"></span>
+            <span class="require">(필수)</span>
+            한국 써브카드® - 프로그램 이용 동의
+          </label>
+          <iframe src="subcard_agree.html" frameborder="0" class="require-iframe"></iframe>
+        </div>
+
+        <div class="agree">
+          <label class="chkbox">
+            <input type="checkbox" name="marketing-agree" id="marketing-agree" class="agree-chkbox" onclick="fnReverseChk(); fnChooseAllChk()">
+            <span class="checkmark"></span>
+            <span>(선택)</span>
+            마케팅 전체 동의
+          </label>
+          <iframe src="marketing_agree.html" frameborder="0"></iframe>
+        </div>
+
+        <div id="marketing-agree">
+          <label class="marketing-chkbox">
+            <input type="checkbox" name="sms" id="sms-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
+            <span class="marketing-checkmark"></span>
+            SMS/LMS/MMS 수신 동의
+          </label>
+
+          <label class="marketing-chkbox">
+            <input type="checkbox" name="email" id="email-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
+            <span class="marketing-checkmark"></span>
+            E-mail 수신 동의
+          </label>
+
+          <label class="marketing-chkbox">
+            <input type="checkbox" name="talk" id="talk-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
+            <span class="marketing-checkmark"></span>
+            알림톡 수신 동의
+          </label>
+        </div>
+        
+        <div id="notice">
+          <img src="../images/join/exclamation_mark.png" alt="느낌표" width="60">
+          <p>
+            <span>만 14 이상 고객만 가입이 가능합니다.</span> <br>
+            써브웨이는 만 14세 미만 아동의 회원가입을 제한하고 있습니다. <br>
+            「정보통신망 이용촉진 및 정보보호 등에 관한 법률에는 만 14세 미만 아동의 개인정보 수집 시 법정대리인 동의를 <br>
+            받도록 규정하고 있으며, 만 14세 미만 아동의 법정대리인 동의없이 회원가입을 하는 경우 회원탈퇴 또는 서비스 이용이 제한될 수 있습니다.」
+          </p>
+        </div>
+      </div>
+      <div class="btn-area">
+        <button type="button" class="nextBtn">다음</button>
+      </div>
+    </main>
+
+
+    <footer id="footer">
+      <ul id="footer-terms">
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">써브카드</a></li>
+        <li><a href="#">점주관리자</a></li>
+        <li><a href="#">Subway Listens</a></li>
+      </ul>
+      <div id="footer-bottom">
+        <ul id="footer-corp-info">
+          <li>서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 콜린클락 | 전화 : 02-797-5036 | 사업자 등록번호 : 101-84-04143</li>
+          <li>SUBWAY® is a Registered Trademark of Subway IP LLC. &copy; 2019 Subway IP LLC. All Rights Reserved. </li>
+        </ul>
+        <div id="sns">
+          <a href="#">
+            <img src="../images/index/instagram.png" alt="인스타그램">
+          </a>
+          <a href="#">
+            <img src="../images/index/facebook.png" alt="페이스북">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div> <!-- div#wrap -->
+</body> 
+</html>
