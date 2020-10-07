@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+#main {
+  width: 100%;
+  padding:80px 0 130px;
+  background-color: #f6f6f6;
+}
+
+#login-container {
+  width: 665px;
+  height: 680px;
+  padding: 86px 100px 60px;
+  border-radius: 30px 0;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+#login-title {
+  width: 450px;
+}
+
+#login-title h1{
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login-title p{
+  color: #666666;
+  font-size: 16px;
+  text-align: center;
+}
+
+#input-container {
+  width: 450px;
+  margin: 50px 0 ;
+}
+
+#input-container #input-email,
+#input-container #input-pw {
+  width: 450px;
+  height: 80px;
+  border: 1px solid #ddd;
+}
+
+#input-container #input-pw {
+  border-top: none;
+  margin-bottom: 10px;
+}
+
+.focus-border {
+  border: 1px solid #009500 !important;
+}
+
+#input-email strong, 
+#input-pw strong {
+  width: 120px;
+  height: 80px;
+  color: #666;
+  line-height: 80px;
+  margin: 0 10px 0 30px;
+  display: inline-block;
+}
+
+#input-email input, 
+#input-pw input {
+  width: 268px;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+
+#input-email input::placeholder, 
+#input-pw input::placeholder {
+  color: #dddddd;
+  font-size: 15px;
+}
+
+/* 이메일 아이디 저장 체크박스 커스텀 시작 */
+
+/* label container */
+
+.login-chkbox-container {
+  color: #666666;
+  font-weight: bold;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-left: 40px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* 원래 체크박스 사라지게하기 */
+
+.login-chkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+
+/* 커스텀 체크박스 구현 */
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+/* 체크 되었을때 배경색 */
+
+.login-chkbox-container input:checked~.checkmark {
+  background-color: #fff;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.login-chkbox-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.login-chkbox-container .checkmark:after {
+  left: 10px;
+  top: -4px;
+  width: 8px;
+  height: 18px;
+  border: solid #009500;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+
+}
+
+/* 이메일 아이디 저장 체크박스 커스텀 끝 */
+
+#login-btn-area {
+  margin-bottom: 20px;
+}
+
+#login-btn-area button{
+  width: 450px;
+  height: 70px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  background-color: #009500;
+}
+
+#find {
+  height: 24px;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+#find li a{
+  color: #888;
+  font-weight: bold;
+  padding: 0 20px;
+  display: inline-block;
+}
