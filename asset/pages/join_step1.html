@@ -27,7 +27,7 @@
             </a>
         </li>
           <li>
-            <a href="#">
+            <a href="/asset/pages//join_step1.html">
               회원가입
             </a>
         </li>
@@ -108,88 +108,90 @@
       <div class="join-title">
         Step1. <strong>약관동의</strong>
       </div>
-      <div class="join">
-        <div class="agree">
-          <label class="chkbox">
-            <input type="checkbox" name="all-agree" id="all-agree" class="agree-chkbox" onclick="fnAllChk()">
-            <span class="checkmark"></span>
-            <strong>약관 전체 동의</strong>
-          </label>
-        </div>
+      <form action="https://www.naver.com">
+        <div class="join">
+          <div class="agree">
+            <label class="chkbox">
+              <input type="checkbox" name="all-agree" id="all-agree" class="agree-chkbox" onclick="fnAllChk()">
+              <span class="checkmark"></span>
+              <strong>약관 전체 동의</strong>
+            </label>
+          </div> <!-- div.agree -->
 
-        <div class="agree">
-          <label class="chkbox">
-            <input type="checkbox" name="homepage-agree" id="homepage-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
-            <span class="checkmark"></span>
-            <span class="require">(필수)</span>
-            홈페이지 이용약관 동의
-          </label>
-          <iframe src="homepage_agree.html" frameborder="0" class="require-iframe"></iframe>
-        </div>
+          <div class="agree">
+            <label class="chkbox">
+              <input type="checkbox" name="homepage-agree" id="homepage-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
+              <span class="checkmark"></span>
+              <span class="require">(필수)</span>
+              홈페이지 이용약관 동의
+            </label>
+            <iframe src="conditions/homepage_agree.html" frameborder="0" class="require-iframe"></iframe>
+          </div> <!-- div.agree -->
 
-        <div class="agree">
-          <label class="chkbox">
-            <input type="checkbox" name="personal-agree" id="personal-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
-            <span class="checkmark"></span>
-            <span class="require">(필수)</span>
-            개인정보 수집 및 이용동의
-          </label>
-          <iframe src="personal_agree.html" frameborder="0" class="require-iframe"></iframe>
-        </div>
+          <div class="agree">
+            <label class="chkbox">
+              <input type="checkbox" name="personal-agree" id="personal-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
+              <span class="checkmark"></span>
+              <span class="require">(필수)</span>
+              개인정보 수집 및 이용동의
+            </label>
+            <iframe src="conditions/personal_agree.html" frameborder="0" class="require-iframe"></iframe>
+          </div> <!-- div.agree -->
 
-        <div class="agree">
-          <label class="chkbox">
-            <input type="checkbox" name="subcard-agree" id="subcard-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
-            <span class="checkmark"></span>
-            <span class="require">(필수)</span>
-            한국 써브카드® - 프로그램 이용 동의
-          </label>
-          <iframe src="subcard_agree.html" frameborder="0" class="require-iframe"></iframe>
-        </div>
+          <div class="agree">
+            <label class="chkbox">
+              <input type="checkbox" name="subcard-agree" id="subcard-agree" class="agree-chkbox" onclick="fnReverseChk()"> 
+              <span class="checkmark"></span>
+              <span class="require">(필수)</span>
+              한국 써브카드® - 프로그램 이용 동의
+            </label>
+            <iframe src="conditions/subcard_agree.html" frameborder="0" class="require-iframe"></iframe>
+          </div> <!-- div.agree -->
 
-        <div class="agree">
-          <label class="chkbox">
-            <input type="checkbox" name="marketing-agree" id="marketing-agree" class="agree-chkbox" onclick="fnReverseChk(); fnChooseAllChk()">
-            <span class="checkmark"></span>
-            <span>(선택)</span>
-            마케팅 전체 동의
-          </label>
-          <iframe src="marketing_agree.html" frameborder="0"></iframe>
-        </div>
+          <div class="agree">
+            <label class="chkbox">
+              <input type="checkbox" name="marketing-agree" id="marketing-agree" class="agree-chkbox" onclick="fnReverseChk(); fnChooseAllChk()">
+              <span class="checkmark"></span>
+              <span>(선택)</span>
+              마케팅 전체 동의
+            </label>
+            <iframe src="conditions/marketing_agree.html" frameborder="0"></iframe>
+          </div> <!-- div.agree -->
 
-        <div id="marketing-agree">
-          <label class="marketing-chkbox">
-            <input type="checkbox" name="sms" id="sms-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
-            <span class="marketing-checkmark"></span>
-            SMS/LMS/MMS 수신 동의
-          </label>
+          <div id="marketing-agree">
+            <label class="marketing-chkbox">
+              <input type="checkbox" name="sms" id="sms-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
+              <span class="marketing-checkmark"></span>
+              SMS/LMS/MMS 수신 동의
+            </label>
 
-          <label class="marketing-chkbox">
-            <input type="checkbox" name="email" id="email-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
-            <span class="marketing-checkmark"></span>
-            E-mail 수신 동의
-          </label>
+            <label class="marketing-chkbox">
+              <input type="checkbox" name="email" id="email-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
+              <span class="marketing-checkmark"></span>
+              E-mail 수신 동의
+            </label>
 
-          <label class="marketing-chkbox">
-            <input type="checkbox" name="talk" id="talk-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
-            <span class="marketing-checkmark"></span>
-            알림톡 수신 동의
-          </label>
-        </div>
-        
-        <div id="notice">
-          <img src="../images/join/exclamation_mark.png" alt="느낌표" width="60">
-          <p>
-            <span>만 14 이상 고객만 가입이 가능합니다.</span> <br>
-            써브웨이는 만 14세 미만 아동의 회원가입을 제한하고 있습니다. <br>
-            「정보통신망 이용촉진 및 정보보호 등에 관한 법률에는 만 14세 미만 아동의 개인정보 수집 시 법정대리인 동의를 <br>
-            받도록 규정하고 있으며, 만 14세 미만 아동의 법정대리인 동의없이 회원가입을 하는 경우 회원탈퇴 또는 서비스 이용이 제한될 수 있습니다.」
-          </p>
-        </div>
-      </div>
-      <div class="btn-area">
-        <button type="button" class="nextBtn">다음</button>
-      </div>
+            <label class="marketing-chkbox">
+              <input type="checkbox" name="talk" id="talk-chkbox" class="marketing-agree-chkbox" onclick="fnChooseReverseChk()">
+              <span class="marketing-checkmark"></span>
+              알림톡 수신 동의
+            </label>
+          </div> <!-- div.marketing-chkbox -->
+          
+          <div id="notice">
+            <img src="../images/join/exclamation_mark.png" alt="느낌표" width="60">
+            <p>
+              <span>만 14 이상 고객만 가입이 가능합니다.</span> <br>
+              써브웨이는 만 14세 미만 아동의 회원가입을 제한하고 있습니다. <br>
+              「정보통신망 이용촉진 및 정보보호 등에 관한 법률에는 만 14세 미만 아동의 개인정보 수집 시 법정대리인 동의를 <br>
+              받도록 규정하고 있으며, 만 14세 미만 아동의 법정대리인 동의없이 회원가입을 하는 경우 회원탈퇴 또는 서비스 이용이 제한될 수 있습니다.」
+            </p>
+          </div> <!-- div#notice -->
+        </div> <!-- div.join -->
+        <div class="btn-area">
+          <button type="button" class="nextBtn">다음</button>
+        </div> <!-- div.btn-area -->
+      </form>
     </main>
 
 

@@ -14,15 +14,13 @@ function fnAllChk() {
 }
 
 function fnReverseChk() {
-  let chkBox01 = document.querySelector("#homepage-agree").checked;
-  let chkBox02 = document.querySelector("#personal-agree").checked;
-  let chkBox03 = document.querySelector("#subcard-agree").checked;
-  let chkBox04 = document.querySelector("#marketing-agree").checked;
-
-  
+  let homepageAgree = document.querySelector("#homepage-agree").checked;
+  let personalAgree = document.querySelector("#personal-agree").checked;
+  let subcardAgree = document.querySelector("#subcard-agree").checked;
+  let marketingAgree = document.querySelector("#marketing-agree").checked;
   
   //4개의 체크박스 모두가 동시에 true라면 
-  if (chkBox01 && chkBox02 && chkBox03 && chkBox04) {     
+  if (homepageAgree && personalAgree && subcardAgree && marketingAgree) {     
     document.querySelector("#all-agree").checked = true;
   }
   //아니라면
@@ -49,15 +47,36 @@ function fnChooseReverseChk() {
   let emailChkbox = document.querySelector("#email-chkbox").checked;
   let talkChkbox = document.querySelector("#talk-chkbox").checked;
   
-  //3개의 체크박스 모두가 동시에 true라면
+  //3개의 체크박스 모두가 동시에 true라면, 전체동의, 선택동의 모두 체크
   if (smsChkbox && emailChkbox && talkChkbox) {
     document.querySelector("#marketing-agree").checked = true;
+    document.querySelector("#all-agree").checked = true;
   }
+  //false라면, 전체동의, 선택동의 모두 체크 해제
   else {
     document.querySelector("#marketing-agree").checked = false;
+    document.querySelector("#all-agree").checked = false;
   }
 
 
 }
 
 //선택 전체동의 끝
+
+//유효성 검사
+const nextBtn = document.querySelector(".nextBtn");
+nextBtn.addEventListener("click", fnValidation);
+const frm = document.querySelector("form");
+
+function fnValidation() {
+  let homepageAgree = document.querySelector("#homepage-agree").checked;
+  let personalAgree = document.querySelector("#personal-agree").checked;
+  let subcardAgree = document.querySelector("#subcard-agree").checked;
+
+  if (homepageAgree == false || personalAgree == false || subcardAgree == false) {
+    alert("필수항목을 체크해주세요");
+  }
+  else {
+    frm.submit();
+  }
+}
