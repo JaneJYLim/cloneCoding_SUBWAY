@@ -5,10 +5,10 @@ function fnAllChk() {
   let chkBox = document.querySelectorAll(".agree-chkbox");
   let marketingChkbox = document.querySelectorAll(".marketing-agree-chkbox");
 
-  for(let i = 0; i < chkBox.length; i++) {
+  for (let i = 0; i < chkBox.length; i++) {
     chkBox[i].checked = chkVal;
   }
-  for(let j = 0; j < marketingChkbox.length; j++) {
+  for (let j = 0; j < marketingChkbox.length; j++) {
     marketingChkbox[j].checked = chkVal;
   }
 }
@@ -18,13 +18,13 @@ function fnReverseChk() {
   let personalAgree = document.querySelector("#personal-agree").checked;
   let subcardAgree = document.querySelector("#subcard-agree").checked;
   let marketingAgree = document.querySelector("#marketing-agree").checked;
-  
+
   //4개의 체크박스 모두가 동시에 true라면 
-  if (homepageAgree && personalAgree && subcardAgree && marketingAgree) {     
+  if (homepageAgree && personalAgree && subcardAgree && marketingAgree) {
     document.querySelector("#all-agree").checked = true;
   }
   //아니라면
-  else {   
+  else {
     document.querySelector("#all-agree").checked = false;
   }
 }
@@ -36,7 +36,7 @@ function fnChooseAllChk() {
   let chkVal = document.querySelector("#marketing-agree").checked;
   let marketingChkbox = document.querySelectorAll(".marketing-agree-chkbox");
 
-  for(let i = 0; i < marketingChkbox.length; i++) {
+  for (let i = 0; i < marketingChkbox.length; i++) {
     marketingChkbox[i].checked = chkVal;
   }
 }
@@ -46,7 +46,7 @@ function fnChooseReverseChk() {
   let smsChkbox = document.querySelector("#sms-chkbox").checked;
   let emailChkbox = document.querySelector("#email-chkbox").checked;
   let talkChkbox = document.querySelector("#talk-chkbox").checked;
-  
+
   //3개의 체크박스 모두가 동시에 true라면, 전체동의, 선택동의 모두 체크
   if (smsChkbox && emailChkbox && talkChkbox) {
     document.querySelector("#marketing-agree").checked = true;
@@ -75,8 +75,7 @@ function fnValidation() {
 
   if (homepageAgree == false || personalAgree == false || subcardAgree == false) {
     alert("필수항목을 체크해주세요");
-  }
-  else {
+  } else {
     frm.submit();
   }
 }

@@ -17,3 +17,8 @@
 
 ### join_step1.html
     1. 필수 체크박스 checked시 다음버튼 변경 구현
+
+### find-shop.html
+    1. lnb sticky
+    2. 셀렉트박스 왼쪽 선택시, 오른쪽 출력
+    3. 지도 넣기

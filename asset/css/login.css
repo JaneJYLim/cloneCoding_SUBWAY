@@ -2,7 +2,7 @@
 
 #main {
   width: 100%;
-  padding:80px 0 130px;
+  padding: 80px 0 130px;
   background-color: #f6f6f6;
 }
 
@@ -19,14 +19,14 @@
   width: 450px;
 }
 
-#login-title h1{
+#login-title h1 {
   font-size: 40px;
   font-family: 'Noto Sans KR', sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
 
-#login-title p{
+#login-title p {
   color: #666666;
   font-size: 16px;
   text-align: center;
@@ -34,7 +34,7 @@
 
 #input-container {
   width: 450px;
-  margin: 50px 0 ;
+  margin: 50px 0;
 }
 
 #input-container #input-email,
@@ -53,7 +53,7 @@
   border: 1px solid #009500 !important;
 }
 
-#input-email strong, 
+#input-email strong,
 #input-pw strong {
   width: 120px;
   height: 80px;
@@ -63,7 +63,7 @@
   display: inline-block;
 }
 
-#input-email input, 
+#input-email input,
 #input-pw input {
   width: 268px;
   height: 40px;
@@ -71,7 +71,7 @@
   outline: none;
 }
 
-#input-email input::placeholder, 
+#input-email input::placeholder,
 #input-pw input::placeholder {
   color: #dddddd;
   font-size: 15px;
@@ -83,7 +83,6 @@
 
 .login-chkbox-container {
   color: #666666;
-  font-weight: bold;
   font-family: 'Noto Sans KR', sans-serif;
   padding-left: 40px;
   display: inline-block;
@@ -161,7 +160,7 @@
   margin-bottom: 20px;
 }
 
-#login-btn-area button{
+#login-btn-area button {
   width: 450px;
   height: 70px;
   color: #ffffff;
@@ -178,7 +177,7 @@
   margin-bottom: 80px;
 }
 
-#find li a{
+#find li a {
   color: #888;
   font-weight: bold;
   padding: 0 20px;

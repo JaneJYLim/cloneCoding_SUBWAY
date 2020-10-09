@@ -17,15 +17,13 @@ function fnLogin() {
     email.value = "";
     input_email.classList.add("focus-border");
     input_pw.classList.remove("focus-border");
-  }
-  else if (pw_value.trim() == "") {
+  } else if (pw_value.trim() == "") {
     alert("비밀번호를 입력해주세요");
     pw.focus();
     pw.value = "";
     input_email.classList.remove("focus-border");
     input_pw.classList.add("focus-border");
-  }
-  else {
+  } else {
     frm.submit();
   }
 
