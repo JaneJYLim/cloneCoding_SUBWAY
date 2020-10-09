@@ -2,7 +2,7 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.07
+작성일자 : 2020.10.09
 
 수정해야할 내용 :
 
