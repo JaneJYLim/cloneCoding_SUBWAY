@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+#main {
+  padding-bottom: 120px;
+  
+}
+#main #lnb {
+  width: 100%;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #ddd;
+  /* position: sticky; */
+}
+
+#lnb ul {
+  width: 1170px;
+  height: 59px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#lnb ul li a {
+  color: #999;
+  height: 60px;
+  line-height: 60px;
+
+  display: inline-block;
+}
+
+#lnb ul li:nth-child(even) a {
+  color: #dddddd;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+#lnb ul li:nth-child(3) a {
+  color: #009223;
+  font-weight: bold;
+  border-bottom: 4px solid #009223;
+}
+
+#main #news-title {
+  color: #333;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+}
+
+#news-info-container {
+  width: 1170px;
+  padding: 100px 0 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#whole-store-info #whole-store-info-flex {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#whole-store-info-flex #how-many-store {
+  height: 40px;
+  color: #888888;
+  line-height: 50px;
+}
+
+#whole-store-info-flex #how-many-store strong {
+  color: #009223;
+}
+
+#whole-store-info-flex #which-district select {
+  width: 192px;
+  height: 40px;
+  color: #888888;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 2px solid #ddd;
+}
+
+table {
+  width: 1170px;
+  font-family: 'Noto Sans KR', sans-serif;
+  border-top: 4px solid #009223;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+table .notice-tr {
+  background-color: #f8f8f8;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table td:first-child {
+  width: 100px;
+  height: 70px;
+}
+
+table td:first-child .num {
+  color: #ffce32;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+table td:nth-child(2) {
+  width: 850px;
+  text-align: left;
+}
+
+table td:nth-child(2) strong{
+  color: #009223;
+}
+
+table td:last-child {
+  width: 120px;
+  color: #aaaaaa;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.pagenation {
+  width: 1170px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagenation a {
+  color: #aaa;
+  line-height: 22px;
+  font-size: 18px;
+  font-family: 'Sunflower', sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.pagenation .page-arrow {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.pagenation .page-arrow:hover {
+  color: #009223;
+}
+
+.pagenation ul {
+  padding: 0 80px;
+  display: flex;
+}
+
+.pagenation ul li {
+  padding: 0 16px;
+}
+
+.pagenation ul li a {
+  line-height: 22px;
+}
+
+.pagenation ul li:first-child a {
+  color: #009223;
+}

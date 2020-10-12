@@ -28,3 +28,7 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 ### join_member.html
     1. 연락처에 숫자 이외의 문자 입력시 바로 제거
     2. 이메일(양쪽 모두)에 숫자와 영문 이외의 문자 입력시 바로 제거
+
+### news_notice.html
+    1. select -> input으로 변경하기
+    2. create 공지사항
