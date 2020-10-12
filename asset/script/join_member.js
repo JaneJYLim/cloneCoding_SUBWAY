@@ -71,13 +71,13 @@ function fnChkPhoneReg() {
 
 //이메일 도메인 선택시 변경
 email = document.querySelector("#email");
-
 email.addEventListener("change", changeDomain);
 
 function changeDomain() {
   let selectTxt = email.options[email.selectedIndex].text;
   document.querySelector("#email-domain").value = selectTxt;
 }
+
 
 //첨부파일 확장자 체크
 let checkFile = document.querySelector("#file-input");
@@ -86,8 +86,25 @@ checkFile.addEventListener("change", attachmentSubmit);
 function attachmentSubmit() {
   let attachment = document.querySelector('#file-input').value;
   attachment = attachment.slice(attachment.indexOf(".") + 1).toLowerCase();
-  console.log(attachment);
-  if(attachment !== "pdf" && attachment !== "docx" && attachment !== "pptx" && attachment !== "xlsx" && attachment !== "jpg" && attachment !== "gif" && attachment !== "png") {
-    alert("첨부가 불가능한 파일입니다. <br>실행파일 또는 소스파일은 업로드 불가 입니다.");
+  
+  if (attachment !== "pdf" && attachment !== "docx" && attachment !== "pptx" && attachment !== "xlsx" && attachment !== "jpg" && attachment !== "gif" && attachment !== "png") {
+    alert("첨부가 불가능한 파일입니다.\n실행파일 또는 소스파일은 업로드 불가 입니다."); 
   }
+  
 }
+
+//파일 선택 시 나타내주기
+
+$(document).ready(function(){ 
+  let fileTarget = $(".filebox #file-input"); 
+  fileTarget.on("change", function(){     // 값이 변경되면 
+    if(window.FileReader){ // modern browser 
+      var filename = $(this)[0].files[0].name; 
+    } 
+    else { // old IE 
+      var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 
+    } 
+    // 추출한 파일명 삽입 
+    $(this).siblings(".file-upload-name").val(filename); 
+  }); 
+});
