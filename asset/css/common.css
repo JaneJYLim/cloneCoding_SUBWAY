@@ -23,6 +23,16 @@ body {
   width: 100%;
 }
 
+select {
+  -webkit-appearance: none;
+  /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../images/search/selectIcon.png) no-repeat 98% 50%;
+  /* 화살표 모양의 이미지 */
+  background-size: 30px 30px;
+}
+
 div#wrap {
   width: 1920px;
   margin: 0 auto;

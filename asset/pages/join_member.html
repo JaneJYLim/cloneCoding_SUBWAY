@@ -108,15 +108,15 @@
 				</ul>
 			</nav> <!-- nav#lnb -->
 
-			<h1 class="join-member-subtitle">가맹신청ㆍ문의</h1>
 			<div class="join-member-container">
+				<h1 class="join-member-subtitle">가맹신청ㆍ문의</h1>
 				<div id="agree-container">
 					<div class="agree">
 						<h3>개인정보수집 및 이용동의</h3>
 						<iframe src="conditions/join_member_personal.html" frameborder="0"></iframe>
 						<br>
-						<label class="checkbox-container"> 개인정보수집 및 이용에 동의합니다.<span>(필수)</span>
-							<input type="checkbox">
+						<label class="checkbox-container"> 개인정보수집 및 이용에 동의합니다. <span>(필수)</span>
+							<input type="checkbox" id="personal-agree">
 							<span class="checkmark"></span>
 						</label>
 					</div> <!-- div.agree -->
@@ -124,71 +124,79 @@
 						<h3>개인정보 위탁동의</h3>
 						<iframe src="conditions/join_member_foster.html" frameborder="0"></iframe>
 						<br>
-						<label class="checkbox-container"> 개인정보위탁에 동의합니다.<span>(필수)</span>
-							<input type="checkbox">
+						<label class="checkbox-container"> 개인정보위탁에 동의합니다. <span>(필수)</span>
+							<input type="checkbox" id="foster-agree">
 							<span class="checkmark"></span>
 						</label>
 					</div> <!-- div.agree -->
 				</div> <!-- div#agree-container -->
 				<form action="https://www.naver.com">
 					<div id="write-form">
+						<h2>문의 작성하기</h2>
 						<table>
 							<tr>
 								<th>
-									이름<span>*</span>
+									이름
+									<span>*</span>
 								</th>
 								<td>
-									<input type="text" placeholder="이름을 입력해주세요">
+									<input type="text" id="uID" placeholder="이름을 입력해주세요">
 								</td>
 							</tr>
 							<tr>
 								<th>
-									연락처<span>*</span>
+									연락처
+									<span>*</span>
 								</th>
 								<td>
-									<input type="text" placeholder="연락 가능한 전화번호를 입력해주세요">
+									<input type="text" id="uPhone" placeholder="연락 가능한 전화번호를 입력해주세요">
 								</td>
 							</tr>
 							<tr>
 								<th>
-									이메일<span>*</span>
+									이메일
+									<span>*</span>
 								</th>
 								<td>
-									<input type="text" placeholder="이메일"> @ <input type="text">
-									<select>
-										<option value="">직접입력</option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
-										<option value=""></option>
+									<input type="text"  id="uEmail" class="email-input" placeholder="이메일">
+									&nbsp;&nbsp;&nbsp;@ &nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="text" id="email-domain" class="email-input">
+									<select id="email">
+										<option>직접입력</option>
+										<option value="naver">naver.com</option>
+										<option value="hanmail">hanmail.net</option>
+										<option value="hotmail">hotmail.com</option>
+										<option value="nate">nate.com</option>
+										<option value="empas">empas.com</option>
+										<option value="dreamwiz">dreamwiz.com</option>
+										<option value="lycos">lycos.co.kr</option>
+										<option value="korea">korea.com</option>
+										<option value="gmail">gmail.com</option>
+										<option value="hanmir">hanmir.com</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<th>
-									지역<span>*</span>
+									지역
+									<span>*</span>
 								</th>
 								<td>
 									<select name="" id="">
-										<option value=""></option>
+										<option value="">시/도</option>
 									</select>
 									<select name="" id="">
-										<option value=""></option>
+										<option value="">시/군/구</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<th>
-									제목<span>*</span>
+									제목
+									<span>*</span>
 								</th>
 								<td>
-									<input type="text" placeholder="제목을 입력해주세요">
+									<input type="text" id="uTitle" placeholder="제목을 입력해주세요">
 								</td>
 							</tr>
 							<tr>
@@ -197,18 +205,20 @@
 									<span>*</span>
 								</th>
 								<td>
-									<textarea name="" id="" cols="100" rows="20">
-가맹점 신청과 관련된 문의사항을 작성해주세요.
-문의하실 내용을 구체적으로 작성해 주시면 더욱 빠르고 정확한 답변을 드릴 수 있습니다.
-														</textarea>
+									<textarea cols="113" rows="8" id="uContent" placeholder="가맹점 신청과 관련된 문의사항을 작성해주세요.&#13;&#10;문의하실 내용을 구체적으로 작성해 주시면 더욱 빠르고 정확한 답변을 드릴 수 있습니다."></textarea>
 								</td>
 							</tr>
 							<tr>
 								<th>
 									첨부파일
 								</th>
-								<td>
-									<input type="file">
+								<td id="file-td">
+									<div class="filebox">
+										<input id="file-upload-name" class="file-upload-name" disabled="disabled">
+										<label for="file-input"> 파일선택</label>
+										<input type="file" id="file-input">
+									</div>
+									<span>※ 등록 가능 확장자 : pdf, docx, pptx, xlsx, jpg, gif, png / 최대 2MB</span>
 								</td>
 							</tr>
 						</table>
@@ -217,12 +227,25 @@
 								신청·문의사항에 대한 답변은 메일로 발송됩니다. 동의하시겠습니까?
 								<span>*</span>
 							</div>
-							<label class="checkbox-container">예, 동의합니다.
-								<input type="checkbox">
+							<label class="checkbox-container agree-or-not-checkbox-container" >예, 동의합니다.
+								<input type="checkbox" id="mail-agree">
 								<span class="checkmark"></span>
 							</label>
 						</div>
-					</div>
+						<div class="notice">
+							<img src="../images/join/exclamation_mark.png" alt="느낌표" width="60">
+							<ul>
+								<li>문의가 집중되거나 주말의 경우 답변이 지연될 수 있습니다. 최대한 빠르게 답변 드리도록 하겠습니다.</li>
+								<li>욕설, 비속어, 비방성 등의 부적절한 단어 포함되어 있는 경우, 답변 진행이 어려울 수 있습니다.</li>
+							</ul>
+						</div> <!-- div.notice -->
+					</div> <!-- div#write-form -->
+					<div class="btn-area">
+						<button type="button" class="cancel-btn">취소</button>
+						<button type="button" class="enroll-btn">등록하기
+							<img src="../images/join/yellow_checkbox.png" alt="">
+						</button>
+					</div> <!-- div.btn-area -->
 				</form>
 			</div> <!-- div.join-member-container -->
 

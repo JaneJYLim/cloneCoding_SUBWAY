@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+#main {
+  background-color: #f6f6f6;
+  padding-bottom: 120px;
+  
+}
 #main #lnb {
   width: 100%;
   background-color: #f6f6f6;
@@ -34,11 +39,16 @@
   border-bottom: 4px solid #009223;
 }
 
+
 #main .join-member-container {
-  border: 1px solid #000;
+  width: 1150px;
+  padding: 0 60px;
+  border: 1px solid #eee;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
-#main .join-member-subtitle {
+.join-member-container .join-member-subtitle {
   color: #333;
   font-size: 40px;
   font-weight: 500;
@@ -46,12 +56,6 @@
   text-align: center;
   padding: 75px 0;
 }
-
-#main .join-member-container {
-  width: 1028px;
-  margin: 0 auto;
-}
-
 .join-member-container #agree-container {
   width: 1028px;
   display: flex;
@@ -78,9 +82,11 @@
 /* 원래 체크박스 사라지게하기 */
 
 .checkbox-container {
+  color: #333;
   font-size: 14px;
+  font-weight: bold;
   padding-left: 40px;
-  margin: 14px 0;
+  margin-top: 14px;
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -91,6 +97,9 @@
 
 }
 
+.checkbox-container span {
+  color: #009223;
+}
 
 /* 원래 체크박스 사라지게하기 */
 
@@ -150,3 +159,236 @@
   transform: rotate(40deg);
 
 }
+
+/* 체크박스 커스텀 끝 */
+
+#write-form {
+  width: 1028px;
+}
+
+#write-form h2 {
+  font-size: 28px;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 60px 0 40px;
+}
+
+#write-form table {
+  width: 1028px;
+  border-bottom: 1px solid #ddd;
+}
+
+#write-form table tr th, #write-form table tr td {
+  height: 70px;
+}
+
+#write-form table tr th {
+  width: 128px;
+  color: #666666;
+  text-align: left;
+  margin-right: 20px;
+}
+
+#write-form table tr th span {
+  color: #ffc312;
+  vertical-align: middle;
+}
+
+#write-form table tr td {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#write-form table tr td input{
+  width: 900px;
+  height: 45px;
+  color: #666666;
+  font-size: 16px;
+  padding-left: 10px;
+  border: none;
+  background-color: #f6f6f6;
+  outline: none;
+}
+
+#write-form table tr td .email-input{
+  width: 200px;
+  margin-right: 10px;
+}
+
+#write-form table tr td input::placeholder{
+  color: #aaa;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+#write-form table tr td select{
+  width: 200px;
+  height: 45px;
+  color: #aaa;
+  font-size: 16px;
+  padding-left: 6px;
+  border: 2px solid #ddd;
+  outline: none;
+}
+
+#write-form table tr td textarea {
+  width: 900px;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #f6f6f6;
+  margin: 10px 0;
+  resize: none;
+}
+
+#write-form table tr td textarea::placeholder {
+  color: #aaaaaa;
+  
+}
+
+#write-form table tr #file-td {
+  display: flex;
+}
+
+#write-form table tr td .filebox {
+  width: 500px;
+  height: 45px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.filebox input[type="file"] {
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip:rect(0,0,0,0); 
+  border: 0;
+}
+
+.filebox label { 
+  color: #009500; 
+  font-size: inherit; 
+  line-height: normal; 
+  vertical-align: middle; 
+  display: inline-block; 
+  cursor: pointer; 
+} 
+.filebox #file-upload-name {
+  width: 400px;
+  height: 38px;
+  margin-top: 1px;
+  background-color: #fff;
+}
+
+.filebox .file-upload-name {
+  font-size: inherit; 
+  font-family: inherit; 
+  line-height: normal; 
+  vertical-align: middle; 
+  margin-right: 10px;
+  background-color: #f5f5f5; 
+  display: inline-block; 
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */ 
+  -moz-appearance: none; 
+  appearance: none;
+}
+
+.filebox label {
+  border-left: 1px solid #ddd;
+  padding-left: 10px;
+  margin-top: 4px;
+}
+
+#write-form table tr td .filebox + span {
+  height: 40px;
+  color: #aaa;
+  font-size: 12px;
+  line-height: 40px;
+  margin-left: 20px;
+  vertical-align: bottom;
+  display: inline-block;
+  transform: translateY(10px);
+}
+
+#agree-or-not {
+  height: 70px;
+  color: #666;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#agree-or-not .agree-question{
+  padding-top: 4px;
+}
+
+#agree-or-not .agree-question span {
+  color: #ffc312;
+  vertical-align: middle;
+}
+
+#agree-or-not .agree-or-not-checkbox-container {
+  margin-top: 4px;
+}
+
+.notice {
+  width: 1028px;
+  padding: 15px 0;
+  background-color: #f6f6f6;
+  margin: 30px 0 100px;
+  display: flex;
+}
+
+.notice img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+
+.notice ul {
+  color: #aaa;
+  font-size: 13px;
+  font-weight: normal;
+  list-style: disc inside;
+  line-height: 1.8em;
+  margin-top: 8px;
+}
+
+.btn-area {
+  width: 1028px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+.btn-area button {
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #009500;
+  border: 2px solid#009500;
+  border-radius: 30px;
+  outline: none;
+  margin: 40px 0 60px;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-area .cancel-btn {
+  width: 130px;
+  margin-right: 10px;
+}
+
+.btn-area .enroll-btn {
+  width: 170px;
+  color: #ffffff;
+  background-color: #009500;
+}
+

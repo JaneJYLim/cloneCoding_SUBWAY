@@ -216,16 +216,6 @@ a {
   font-size: 16px;
   padding: 0 10px;
   border: 2px solid #ddd;
-
-  -webkit-appearance: none;
-  /* 네이티브 외형 감추기 */
-  -moz-appearance: none;
-  appearance: none;
-  background: url(../images/search/selectIcon.png) no-repeat 98% 50%;
-  /* 화살표 모양의 이미지 */
-  background-size: 30px 30px;
-
-
 }
 
 #whole-store-info table {

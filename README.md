@@ -2,7 +2,7 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.07
+작성일자 : 2020.10.12
 
 수정해야할 내용 :
 
@@ -24,3 +24,7 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
     1. lnb sticky
     2. 셀렉트박스 왼쪽 선택시, 오른쪽 출력
     3. 지도 넣기
+
+### join_member.html
+    1. 연락처에 숫자 이외의 문자 입력시 바로 제거
+    2. 이메일(양쪽 모두)에 숫자와 영문 이외의 문자 입력시 바로 제거
