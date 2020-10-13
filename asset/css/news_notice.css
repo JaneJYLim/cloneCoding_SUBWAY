@@ -54,29 +54,59 @@
   margin: 0 auto;
 }
 
-#whole-store-info #whole-store-info-flex {
+#news-info #news-info-flex {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-#whole-store-info-flex #how-many-store {
+#news-info-flex #how-many-content {
   height: 40px;
   color: #888888;
   line-height: 50px;
 }
 
-#whole-store-info-flex #how-many-store strong {
+#news-info-flex #how-many-content strong {
   color: #009223;
 }
 
-#whole-store-info-flex #which-district select {
-  width: 192px;
+#search-word {
+  width: 260px;
   height: 40px;
-  color: #888888;
-  font-size: 16px;
-  padding: 0 10px;
+  text-align: left;
   border: 2px solid #ddd;
+  position: relative;
+}
+
+#search-word input {
+  width: 224px;
+  height: 30px;
+  font-size: 15px;
+  padding-left: 10px;
+  margin-top: 4px;
+  border: none;
+  outline: none;
+}
+
+#search-word input::placeholder {
+  color: #aaa;
+  font-size: 15px;
+}
+
+#search-word a img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+#search-word a::after {
+  content: "";
+  width: 2px;
+  height: 18px;
+  background-color: #ddd;
+  position: absolute;
+  right: 36px;
+  top: 10px;
 }
 
 table {
@@ -87,35 +117,35 @@ table {
   margin-bottom: 40px;
 }
 
-table .notice-tr {
+#news-info table .notice-tr {
   background-color: #f8f8f8;
 }
 
-table tr {
+#news-info table tr {
   border-bottom: 1px solid #ddd;
 }
 
-table td:first-child {
+#news-info table td:first-child {
   width: 100px;
   height: 70px;
 }
 
-table td:first-child .num {
+#news-info table .num {
   color: #ffce32;
   font-size: 18px;
   font-weight: bold;
 }
 
-table td:nth-child(2) {
+#news-info table td:nth-child(2) {
   width: 850px;
   text-align: left;
 }
 
-table td:nth-child(2) strong{
+#news-info table td:nth-child(2) strong{
   color: #009223;
 }
 
-table td:last-child {
+#news-info table td:last-child {
   width: 120px;
   color: #aaaaaa;
   font-size: 17px;
