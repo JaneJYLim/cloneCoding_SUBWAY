@@ -9,6 +9,10 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 ### join_member.html
     1. submit시 모달레이어팝업창 뜨고 3초 후 메인페이지로 이동
 
+### find-member.html
+    1. 셀렉트박스 왼쪽 선택시, 오른쪽 출력
+    
+# 
 
 수정해야할 내용 :
 
@@ -25,8 +29,7 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 
 ### find-shop.html
     1. lnb sticky
-    2. 셀렉트박스 왼쪽 선택시, 오른쪽 출력
-    3. 지도 넣기
+    2. 지도 넣기
 
 ### join_member.html
     1. 연락처에 숫자 이외의 문자 입력시 바로 제거
