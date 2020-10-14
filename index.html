@@ -6,10 +6,12 @@
   <title>Document</title>
   <link rel="stylesheet" href="asset/css/common.css">
   <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <script defer src="asset/script/jquery-3.5.1.min.js"></script>
   <script defer src="asset/script/common.js"></script>
   <script defer src="asset/script/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </head>
 <body>
   <div id="wrap">
@@ -92,24 +94,29 @@
         
     </header>
     <main id="main">
-      <div id="main-slide-img">
-          <div id="main-slide-shuttle-frame">
-            <a href="#">
-              <img src="asset/images/slide/slide_1.jpg" alt="슬라이드이미지1" width="1920" height="440">
-            </a>
-            <a href="#">
-              <img src="asset/images/slide/slide_2.jpg" alt="슬라이드이미지2" width="1920" height="440">
-            </a>
-            <a href="#">
-              <img src="asset/images/slide/slide_3.jpg" alt="슬라이드이미지3" width="1920" height="440">
-            </a>
-          </div> <!-- div#main-slide-shuttle-frame -->
+      <div class="autoplay">
+        <div>
+          <a href="#">
+            <img src="asset/images/slide/slide_1.jpg" alt="슬라이드이미지1" width="1920" height="440">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="asset/images/slide/slide_2.jpg" alt="슬라이드이미지2" width="1920" height="440">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="asset/images/slide/slide_3.jpg" alt="슬라이드이미지3" width="1920" height="440">
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <img src="asset/images/slide/slide_4.jpg" alt="슬라이드이미지4" width="1920" height="440">
+          </a>
+        </div>
       </div> 
-      <div class="main-bx-btn bx-btn">
-        <span class="bx-pager active"></span>
-        <span class="bx-pager"></span>
-        <span class="bx-pager"></span>
-      </div>
+    
       <div id="quick-link">
         <a id="find-shop" href="asset/pages/find_shop.html">
           <img src="asset/images/index/find_shop_icon.png" alt="장소아이콘">
@@ -434,5 +441,6 @@
       </div>
     </footer>
   </div> <!-- div#wrap -->
+
 </body> 
 </html>

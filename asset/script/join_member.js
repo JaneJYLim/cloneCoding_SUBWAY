@@ -1,55 +1,3 @@
-//유효성 검사
-
-let enrollBtn = document.querySelector(".enroll-btn");
-enrollBtn.addEventListener("click", fnValidation);
-let frm = document.querySelector("form");
-
-function fnValidation() {
-  let personalAgree = document.querySelector("#personal-agree");
-  let personalAgree_checked = personalAgree.checked;
-  let fosterAgree = document.querySelector("#foster-agree");
-  let fosterAgree_checked = fosterAgree.checked;
-  let uId = document.querySelector("#uID");
-  let uPhone = document.querySelector("#uPhone");
-  let uEmail = document.querySelector("#uEmail");
-  let emailDomain = document.querySelector("#email-domain");
-  let uTitle = document.querySelector("#uTitle");
-  let uContent = document.querySelector("#uContent");
-  let mailAgree = document.querySelector("#mail-agree");
-  let mailAgree_checked = mailAgree.checked;
-
-  if (personalAgree_checked == false) {
-    alert("개인정보수집 및 이용에 동의가 필요합니다.");
-    personalAgree.focus();
-  } else if (fosterAgree_checked == false) {
-    alert("개인정보 위탁에 동의가 필요합니다.");
-    fosterAgree.focus();
-  } else if (uId.value.trim() == "") {
-    alert("이름을 입력해주세요.");
-    uId.focus();
-  } else if (uPhone.value.trim() == "") {
-    alert("연락 가능한 전화번호를 입력해주세요.");
-    uPhone.focus();
-  } else if (uEmail.value.trim() == "") {
-    alert("이메일을 입력해주세요.");
-    uEmail.focus();
-  } else if (emailDomain.value.trim() == "") {
-    alert("이메일을 입력해주세요.");
-    emailDomain.focus();
-  } else if (uTitle.value.trim() == "") {
-    alert("제목을 입력해주세요.")
-    uTitle.focus();
-  } else if (uContent.value.trim() == "") {
-    alert("내용을 입력해주세요.")
-    uContent.focus();
-  } else if (mailAgree_checked == false)  {
-    alert("신청·문의사항에 대한 답변은 메일 발송에 따른 동의가 필요합니다.");
-    mailAgree.focus();
-  } else {
-    frm.submit();
-  }
-}
-
 //전화번호 숫자 이외의 문자 입력시 제거
 
 //수정할것!
@@ -108,3 +56,76 @@ $(document).ready(function(){
     $(this).siblings(".file-upload-name").val(filename); 
   }); 
 });
+
+
+//유효성 검사
+
+let enrollBtn = document.querySelector(".enroll-btn");
+enrollBtn.addEventListener("click", fnValidation);
+let frm = document.querySelector("form");
+
+function fnValidation() {
+  let personalAgree = document.querySelector("#personal-agree");
+  let personalAgree_checked = personalAgree.checked;
+  let fosterAgree = document.querySelector("#foster-agree");
+  let fosterAgree_checked = fosterAgree.checked;
+  let uId = document.querySelector("#uID");
+  let uPhone = document.querySelector("#uPhone");
+  let uEmail = document.querySelector("#uEmail");
+  let emailDomain = document.querySelector("#email-domain");
+  let uTitle = document.querySelector("#uTitle");
+  let uContent = document.querySelector("#uContent");
+  let mailAgree = document.querySelector("#mail-agree");
+  let mailAgree_checked = mailAgree.checked;
+
+  if (personalAgree_checked == false) {
+    alert("개인정보수집 및 이용에 동의가 필요합니다.");
+    personalAgree.focus();
+  } else if (fosterAgree_checked == false) {
+    alert("개인정보 위탁에 동의가 필요합니다.");
+    fosterAgree.focus();
+  } else if (uId.value.trim() == "") {
+    alert("이름을 입력해주세요.");
+    uId.focus();
+  } else if (uPhone.value.trim() == "") {
+    alert("연락 가능한 전화번호를 입력해주세요.");
+    uPhone.focus();
+  } else if (uEmail.value.trim() == "") {
+    alert("이메일을 입력해주세요.");
+    uEmail.focus();
+  } else if (emailDomain.value.trim() == "") {
+    alert("이메일을 입력해주세요.");
+    emailDomain.focus();
+  } else if (uTitle.value.trim() == "") {
+    alert("제목을 입력해주세요.")
+    uTitle.focus();
+  } else if (uContent.value.trim() == "") {
+    alert("내용을 입력해주세요.")
+    uContent.focus();
+  } else if (mailAgree_checked == false)  {
+    alert("신청·문의사항에 대한 답변은 메일 발송에 따른 동의가 필요합니다.");
+    mailAgree.focus();
+  } else {
+    fnOpenModalLayer();
+  }
+}
+
+//
+
+
+
+let num = document.querySelector("#num");
+let cntNum = 3;
+function fnCountdown() {
+  num.innerHTML = cntNum;
+  if (cntNum == 0) frm.submit();
+  cntNum--;
+  
+}
+
+const modalLayerPopup = document.querySelector("#modalLayerPopupBg");
+function fnOpenModalLayer() {
+  modalLayerPopup.style.display="block";    
+
+  setInterval(fnCountdown, 1000);
+}

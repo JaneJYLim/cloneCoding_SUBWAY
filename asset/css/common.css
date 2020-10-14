@@ -21,6 +21,7 @@ ul {
 
 body {
   width: 100%;
+  height: 100%;
 }
 
 select {
@@ -178,11 +179,6 @@ header#header {
 }
 
 /* slide-btn active시 적용 */
-.main-bx-btn .active {
-  width: 30px;
-  background-color: #ffce32;
-  transition: 0.5s all ease-in-out;
-}
 
 .section-bx-btn .active {
   width: 30px;

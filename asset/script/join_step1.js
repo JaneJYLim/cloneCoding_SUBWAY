@@ -41,7 +41,6 @@ function fnChooseAllChk() {
   }
 }
 
-
 function fnChooseReverseChk() {
   let smsChkbox = document.querySelector("#sms-chkbox").checked;
   let emailChkbox = document.querySelector("#email-chkbox").checked;
@@ -57,11 +56,18 @@ function fnChooseReverseChk() {
     document.querySelector("#marketing-agree").checked = false;
     document.querySelector("#all-agree").checked = false;
   }
-
-
 }
 
 //선택 전체동의 끝
+
+let homepageAgree = document.querySelector("#homepage-agree").checked;
+let personalAgree = document.querySelector("#personal-agree").checked;
+let subcardAgree = document.querySelector("#subcard-agree").checked;
+
+if (homepageAgree&&personalAgree&&subcardAgree) {
+  document.querySelector("#nextBtn>img").classList.add(when-all-checked);
+}
+
 
 //유효성 검사
 const nextBtn = document.querySelector(".nextBtn");

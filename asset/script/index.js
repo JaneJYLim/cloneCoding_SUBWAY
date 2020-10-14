@@ -1,32 +1,19 @@
 //main 슬라이드 구현 시작
-setInterval(fn_slide, 3000);
+// tiny-slider 라이브러리 연동
+var slider = tns({
+  "container": ".autoplay",
+  "items": 1,
+  "speed": 300,
+  "autoplay": true,
+  "autoplayHoverPause": true,
+  "autoplayTimeout": 3000,
+  "swipeAngle": false,
+  "autoplayText": [
+    "▶",
+    "❚❚"
+  ],
+});
 
-function fn_slide() {
-  $("#main-slide-shuttle-frame").animate({
-    "margin-left": "-1920px"
-  }, 1000, function () {
-    $(this).css({
-      "margin-left": "0"
-    });
-    $("#main-slide-shuttle-frame a:first").insertAfter("#main-slide-shuttle-frame a:last");
-  });
-}
-
-//main 슬라이드 bx-btn 활성화
-const main_pager = document.querySelectorAll(".main-bx-btn .bx-pager");
-const main_slide_img = document.querySelectorAll("#main-slide-img a");
-for (let i = 0; i < main_pager.length; i++) {
-  main_pager[i].addEventListener("click", function () {
-
-    //해당 pager를 제외한 나머지 active 비활성화
-    for (let j = 0; j < main_pager.length; j++) {
-      main_pager[j].classList.remove("active");
-    }
-
-    //해당 pager 활성화
-    this.classList.add("active");
-  })
-}
 //main 슬라이드 구현 끝
 
 //section.subway-menu 시작 

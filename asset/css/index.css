@@ -6,29 +6,52 @@ main#main {
   
   position: relative;
 }
-  /* slide-img 영역 시작 */
-#main #main-slide-img {
-  width: 100%;
-  height: 440px;
-  overflow: hidden;
-  
-  position: relative;
-}
 
-#main-slide-img #main-slide-shuttle-frame {
-  width: 5800px;
-  height: 440px;
-  
+.tns-outer>button {
+  width: 20px;
+  height: 16px;
+  color: #333;
+  font-size: 12px;
+  line-height: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #ffce32;
+
   position: absolute;
+  bottom: 98px;
+  left: 52%;
+  z-index: 4;
 }
 
-#main-slide-img #main-slide-shuttle-frame a{
-  width: 1920px;
-  height: 440px;
-  float: left;
-  
+.tns-controls button {
+  display: none;
 }
-  /* slide-img 영역 끝 */
+
+.tns-nav {
+  width: 120px;
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+.tns-nav button {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 30px;
+  margin: 0 5px;
+  background-color: #fff;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  outline: none;
+  transition-duration: 0.3s;
+}
+
+
   /* quick-link(매장찾기, 가맹신청문의) 영역 시작 */
 #quick-link {
   width: 600px;
