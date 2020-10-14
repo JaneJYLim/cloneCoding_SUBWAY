@@ -10,8 +10,10 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
     1. submit시 모달레이어팝업창 뜨고 3초 후 메인페이지로 이동
 
 ### find-member.html
-    1. 셀렉트박스 왼쪽 선택시, 오른쪽 출력
-    
+    1. 이메일 셀렉트박스 내용 변경시, 왼쪽 input에 value값 출력
+    2. 지역 셀렉트박스 왼쪽 선택시, 오른쪽 출력
+
+
 # 
 
 수정해야할 내용 :
@@ -33,4 +35,4 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 
 ### join_member.html
     1. 연락처에 숫자 이외의 문자 입력시 바로 제거
-    2. 이메일(양쪽 모두)에 숫자와 영문 이외의 문자 입력시 바로 제거
+    2. 이메일(양쪽 모두)에 가능한 문자 이외의 내용 입력시 바로 제거

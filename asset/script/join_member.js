@@ -14,15 +14,29 @@ function fnChkPhoneReg() {
     }
     
   } */
+  email = document.querySelector("#email");
 
-
-//이메일 도메인 선택시 변경
-email = document.querySelector("#email");
-email.addEventListener("change", changeDomain);
+  let domain = ["직접입력", "naver.com", "hanmail.net", "hotmail.com", "nate.com", "empas.com", "dreamwiz.com", "lycos.co.kr", "korea.com", "gmail.com", "hamir.com"]
+  let domainAddOption = "";
+  for (let i = 0; i<domain.length; i++) {
+    domainAddOption += `<option>${domain[i]}</option>`;
+  }
+  email.innerHTML = domainAddOption;
+  
+  email.addEventListener("change", changeDomain);
+  
+  //이메일 도메인 선택시 변경
 
 function changeDomain() {
   let selectTxt = email.options[email.selectedIndex].text;
-  document.querySelector("#email-domain").value = selectTxt;
+  let emailDomain = document.querySelector("#email-domain");
+  if(email.value == "직접입력") {
+    emailDomain.value = ""; 
+    emailDomain.focus();
+  }
+  else {
+    emailDomain.value = selectTxt;
+  }
 }
 
 // 시/도 option 구현
