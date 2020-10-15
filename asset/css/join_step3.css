@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+* {
+color: #555;
+}
+#main {
+  width: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-bottom: 130px;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+}
+
+#main .sub-title {
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  padding: 60px;
+
+}
+
+#main .join-step ul {
+  width: 500px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+#main .join-title {
+  width: 1170px;
+  height: 70px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 40px 0 0 0;
+  background-color: #58006c;
+  margin: 0 auto;
+}
+
+#main .join-title strong {
+  color: #ffc300;
+}
+
+#main .join {
+  width: 1170px;
+  padding: 85px 100px 100px;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.join .info-subtitle {
+  font-size: 30px;
+  padding-bottom: 14px;
+}
+
+
+.join .required {
+  color: #ffc300;
+}
+
+.join button {
+  width: 95px;
+  height: 24px;
+  color: #009500;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 0 0 10px;
+  border: none;
+  border-left: 1px solid #ccc;
+  background: none;
+  margin-top: 14px;
+  outline: none;
+  cursor: pointer;
+
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+dl {
+  width: 970px;
+  margin: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+}
+
+dl dt, dl dd {
+  font-size: 15px;
+}
+
+dl dt {
+  width: 160px;
+  height: 70px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-left: 20px;
+  /* border: 1px solid #f00; */
+
+}
+
+dl dd {
+  width: 806px;
+  height: 70px;
+  line-height: 66px;
+  padding: 0 10px;
+  position: relative;
+  /* border: 1px solid #00f; */
+
+}
+
+dl dd input {
+  font-size: 16px;
+  height: 35px;
+  padding-left: 10px;
+  border: none;
+  margin: 0 10px;
+}
+
+dl dd input::placeholder {
+  font-size: 13px;
+  color: #aaa;
+}
+
+dl dd select {
+  color: #aaa;
+  height: 35px;
+  padding-left: 10px;
+}
+
+#basic-info .email, #basic-info .domain, #basic-info select {
+  width: 155px;
+}
+
+#basic-info select {
+  border: 1px solid #ddd;
+}
+
+#txt {
+  font-size: 12px;
+  color: #f00;
+  line-height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+#basic-info .user-pw {
+  width: 235px;
+}
+
+#add-info .info-subtitle {
+  margin-top: 50px;
+}
+
+#add-info #user-zipcode {
+  width: 640px;
+}
+
+#add-info .adr {
+  width: 786px;
+}
+
+.btn-area {
+  width: 1170px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.btn-area .complete-btn {
+  width: 190px;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid#009500;
+  border-radius: 30px;
+  outline: none;
+  background-color: #009500;
+  margin: 40px 0 60px;
+  cursor: pointer;
+}
+
+.modal-layer-popup-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+
+  display: none;
+}
+
+.modal-layer-popup-bg .modal-layer-frame{
+  width: 510px;
+  height: 530px;
+  padding: 20px 15px;
+  border-radius: 30px;
+  background-color: #ffc312;
+  
+  position:absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-layer-frame .modal-layer-popup {
+  width: 480px;
+  height: 490px;
+  border-radius: 30px;
+background-color: #fff;
+}
+
+.modal-layer-popup h1 {
+  width: 380px;
+  color: #009500;
+  font-weight: normal;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  border-bottom: 4px solid #009500;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.modal-layer-popup h1+div {
+  width: 380px;
+  height: 210px;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.modal-layer-popup h1+div img{
+  width: 68px;
+  height: 68px;
+  margin-bottom: 10px;
+}
+
+.modal-layer-popup h1+div p{
+  width: 290px;
+  height: 36px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.modal-layer-popup .btn-area {
+  width: 480px;
+}
+
+.modal-layer-popup .btn-area button {
+  width: 126px;
+  height: 50px;
+  color: #009500;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #009500;
+  border-radius: 30px;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}

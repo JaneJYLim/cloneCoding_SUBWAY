@@ -2,7 +2,7 @@
 
 //수정할것!
 
-/* let uPhone = document.querySelector("#uPhone");
+let uPhone = document.querySelector("#uPhone");
 uPhone.addEventListener("keyup",fnChkPhoneReg);
 
 function fnChkPhoneReg() {
@@ -13,7 +13,8 @@ function fnChkPhoneReg() {
       uPhone_value = uPhone_value.replace(chkPhoneReg, "");
     }
     
-  } */
+  }
+
   email = document.querySelector("#email");
 
   let domain = ["직접입력", "naver.com", "hanmail.net", "hotmail.com", "nate.com", "empas.com", "dreamwiz.com", "lycos.co.kr", "korea.com", "gmail.com", "hamir.com"]
@@ -23,9 +24,9 @@ function fnChkPhoneReg() {
   }
   email.innerHTML = domainAddOption;
   
-  email.addEventListener("change", changeDomain);
   
   //이메일 도메인 선택시 변경
+  email.addEventListener("change", changeDomain);
 
 function changeDomain() {
   let selectTxt = email.options[email.selectedIndex].text;

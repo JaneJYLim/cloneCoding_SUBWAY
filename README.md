@@ -36,3 +36,6 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 ### join_member.html
     1. 연락처에 숫자 이외의 문자 입력시 바로 제거
     2. 이메일(양쪽 모두)에 가능한 문자 이외의 내용 입력시 바로 제거
+
+### join_step3.html
+    1. 스텝 이미지 변경
