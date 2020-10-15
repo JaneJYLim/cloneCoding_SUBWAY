@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+#main {
+  width: 100%;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin: 0 auto;
+}
+
+#main #title {
+  font-size: 36px;
+  padding: 70px 0 50px;
+}
+
+
+#order-area .order-way a{
+  width: 584px;
+  height: 68px;
+  line-height: 68px;
+  display: inline-block;
+}
+
+#order-area .order-way #fast-sub{
+  color: #ffffff;
+  background-color: #009500;
+}
+
+#order-area .order-way #home-sub{
+  color: #333;
+  background-color: #fff;
+}
+
+#order-area .order-place {
+  width: 1170px;
+  height: 68px;
+  background-color: #58006c;
+  margin: 0 auto;
+  
+  display: flex;
+}
+
+#order-area .order-place dt{
+  color: #ffffff;
+  font-weight: bold;
+}
