@@ -14,6 +14,7 @@ function fnChkPhoneReg() {
     }
     
   }
+}
 
   email = document.querySelector("#email");
 
