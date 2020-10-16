@@ -2,17 +2,13 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.14
+작성일자 : 2020.10.16
 
 구현한 내용 :
 
-### join_member.html
-    1. submit시 모달레이어팝업창 뜨고 3초 후 메인페이지로 이동
-
-### find-member.html
-    1. 이메일 셀렉트박스 내용 변경시, 왼쪽 input에 value값 출력
-    2. 지역 셀렉트박스 왼쪽 선택시, 오른쪽 출력
-
+### shopping_basket.html
+    1. shopping_basket 수량 증감
+    2. 주문가격 구현
 
 # 
 
@@ -39,3 +35,6 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 
 ### join_step3.html
     1. 스텝 이미지 변경
+
+### shopping_basket.html
+    1. 수량에 따른 가격 변동

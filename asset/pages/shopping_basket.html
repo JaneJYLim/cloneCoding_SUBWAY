@@ -96,50 +96,102 @@
     <main id="main">
       <h1 id="title">장바구니</h1>
       <div id="order-area">
-      <div class="order-way">
-        <a href="#" id="fast-sub">FAST-SUB</a><a href="#" id="home-sub">HOME-SUB</a>
-      </div> <!-- div.order-way -->
-      <dl class="order-place">
-        <dt>픽업매장</dt>
-        <dd>
-          <strong>부천상동점(경기도 부천시 상동로 87 가나베스트타운 103호)</strong>
-          <button>변경</button>
-        </dd>
-      </dl>
-      
+        <div class="order-way">
+          <a href="#" id="fast-sub">FAST-SUB</a><a href="#" id="home-sub">HOME-SUB</a>
+        </div> <!-- div.order-way -->
+        <dl class="order-place">
+          <dt>픽업매장</dt>
+          <dd>
+            <strong>부천상동점(경기도 부천시 상동로 87 가나베스트타운 103호)</strong>
+            <button>변경</button>
+          </dd>
+        </dl>
+        <div id="within-14">
+          <span>!</span>최근 14일 이내 담은 상품만 확인 가능합니다.
+        </div>
+        <div id="select-delete">
+          <label class="chkbox">
+            <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" onclick="fnAllChk()">
+            <span class="checkmark"></span>
+            <strong>전체선택</strong>
+          </label>
+          <button type="button" id="delete-btn">선택삭제</button>
+        </div>
+        <div class="order-info-container">
+          <div class="menu-info">
+            <div class="menu-content">
+              <label class="chkbox">
+                <input type="checkbox" name="checkbox" class="select-chkbox">
+                <span class="checkmark select-checkmark"></span>
+                <strong>쉬림프</strong>
+              </label>
+              <p>15cm, 위트(토스팅), 모차렐라치즈, 양상추, 토마토, 오이, 피망, 양파, 레드와인식초, 올리브오일</p>
+              <div class="price">5700</div>
+            </div>
+            <img src="../images/sandwich/premium/shrimp.jpg" alt="" class="order-image" width="348">
+          </div> <!-- div.menu-info -->
+          <div class="add-order">
+            <div class="add-order-content">
+              <span class="add">추가</span>
+              <span class="add-content">화이트 초코 마카다미아 쿠키/ 탄산음료 16oz</span>
+            </div> <!-- div.add-order-content -->
+            <div class="add-order-price">1900</div> <!-- div.add-order-price -->
+          </div> <!-- div.add-order -->
+          <div class="order-total">
+            <div class="order-count">
+              수량
+              <button type="button" class="minus-btn">－</button>
+              <input type="text" class="order-num" value="1">
+              <button type="button" class="plus-btn">＋</button>
+            </div> <!-- div.order-count -->
+            <div class="order-sum">
+              총 주문금액
+              <span class="sum"></span>
+            </div> <!-- div.order-sum -->
+          </div> <!-- div.order-total -->
+        </div> <!-- div.order-info-container -->
 
-        <div class="order-info-area"> 
-          <div class="order-info-flex">
-            <div class="order-info"></div> <!-- div.order-info -->
-            <img src="" alt="" class="order-image">
-          </div>  <!-- div.order-info-flex -->
-          <div class="order-plus">
-            <div class="order-plus-content"></div> <!-- div.order-plus-content -->
-            <div class="order-plus-price"></div> <!-- div.order-plus-price -->
-          </div> <!-- div.order-plus -->
-          <div class="order-num-sum">
-            <div class="order-num"></div> <!-- div.order-num -->
-            <div class="order-sum"></div> <!-- div.order-sum -->
-          </div> <!-- div.order-num-sum -->
-        </div> <!-- div.order-info-area -->
+        <div class="order-info-container">
+          <div class="menu-info">
+            <div class="menu-content">
+              <label class="chkbox">
+                <input type="checkbox" name="checkbox" class="select-chkbox">
+                <span class="checkmark select-checkmark"></span>
+                <strong>에그마요</strong>
+              </label>
+              <p>15cm, 위트(토스팅), 모차렐라치즈, 양상추, 토마토, 오이, 피망, 양파, 레드와인식초, 올리브오일</p>
+              <div class="price">4300</div>
+            </div>
+            <img src="../images/sandwich/classic/egg_mayo.jpg" alt="" class="order-image" width="348">
+          </div> <!-- div.menu-info -->
+          <div class="order-total">
+            <div class="order-count">
+              수량
+              <button type="button" class="minus-btn">－</button>
+              <input type="text" class="order-num" value="1">
+              <button type="button" class="plus-btn">＋</button>
+            </div> <!-- div.order-count -->
+            <div class="order-sum">
+              총 주문금액
+              <span class="sum"></span>
+            </div> <!-- div.order-sum -->
+          </div> <!-- div.order-total -->
+        </div> <!-- div.order-info-container -->
+        <div class="last-order-check">
+          <div class="last-order-sum">
+            최종 결제 금액
+            <span id="last-sum"></span>
+          </div> <!-- div.last-order-sum -->
+          <div class="last-order-btn-area">
+            <button type="button" id="add-menu-btn">메뉴추가하기</button>
+            <button type="button" id="order-btn">
+              주문하기
+              <img src="../images/join/yellow_checkbox.png" alt="체크마크">
+            </button>
+          </div>
+        </div>
 
-        <div class="order-info-area"> 
-          <div class="order-info-flex">
-            <div class="order-info"></div> <!-- div.order-info -->
-            <img src="" alt="" class="order-image">
-          </div>  <!-- div.order-info-flex -->
-          <div class="order-plus">
-            <div class="order-plus-content"></div> <!-- div.order-plus-content -->
-            <div class="order-plus-price"></div> <!-- div.order-plus-price -->
-          </div> <!-- div.order-plus -->
-          <div class="order-num-sum">
-            <div class="order-num"></div> <!-- div.order-num -->
-            <div class="order-sum"></div> <!-- div.order-sum -->
-          </div> <!-- div.order-num-sum -->
-        </div> <!-- div.order-info-area -->
-        
-
-    </div> <!-- div#order-area -->
+      </div> <!-- div#order-area -->
     </main> <!-- main#main -->
 
     <footer id="footer">
