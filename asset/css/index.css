@@ -2,8 +2,8 @@
 
 /* main#main 영역 시작 */
 main#main {
+  width: 1920px;
   height: 490px;
-  
   position: relative;
 }
 
@@ -19,8 +19,8 @@ main#main {
   background-color: #ffce32;
 
   position: absolute;
-  bottom: 98px;
-  left: 52%;
+  bottom: 58px;
+  left: 48%;
   z-index: 4;
 }
 
@@ -32,8 +32,8 @@ main#main {
   width: 120px;
   display: flex;
   position: absolute;
-  bottom: 100px;
-  left: 50%;
+  bottom: 60px;
+  left: 46%;
   transform: translateX(-50%);
   z-index: 4;
 }
@@ -55,9 +55,7 @@ main#main {
   /* quick-link(매장찾기, 가맹신청문의) 영역 시작 */
 #quick-link {
   width: 600px;
-  height: 80px;
   display: flex;
-  
   position: absolute;
   bottom: 0;
   right: 360px;

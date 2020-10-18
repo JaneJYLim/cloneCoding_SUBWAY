@@ -48,8 +48,8 @@
 }
 
 #news-info-container {
-  width: 1170px;
-  padding: 100px 0 100px;
+  width: 1280px;
+  padding: 100px 50px 100px;
   text-align: center;
   margin: 0 auto;
 }
@@ -76,6 +76,7 @@
   text-align: left;
   border: 2px solid #ddd;
   position: relative;
+  left: -10px;
 }
 
 #search-word input {

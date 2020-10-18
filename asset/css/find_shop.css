@@ -127,7 +127,8 @@ a {
 
 /* section 폭 설정 */
 .store-info-box {
-  width: 1200px;
+  width: 1280px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 

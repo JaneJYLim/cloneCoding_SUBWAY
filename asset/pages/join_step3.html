@@ -14,209 +14,209 @@
 </head>
 
 <body>
-  <div id="wrap">
-    <header id="header">
+  <header id="header">
+    <div id="header-logo-signup">
       <div id="header-logo">
         <a href="../../index.html">
           <img src="../images/index/header_logo.png" alt="헤더로고">
-        </a>
-      </div>
+      </a>  
+      </div> <!-- div#header-logo -->
       <div id="sign-up">
         <ul>
           <li>
-            <a href="login.html">
+            <a href="../pages/login.html">
               로그인
             </a>
-          </li>
+        </li>
           <li>
-            <a href="join_step1.html">
+            <a href="../pages/join_step1.html">
               회원가입
             </a>
-          </li>
+        </li>
           <li>
             <a href="#">
               <img src="../images/index/earth.jpg" alt="지구" width="24">
             </a>
-          </li>
+        </li>
         </ul>
-      </div>
-      <nav id="gnb">
-        <ul id="main-menu">
-          <li><a href="#">메뉴소개</a></li>
-          <li><a href="#">이용방법</a></li>
-          <li><a href="#">새소식</a></li>
-          <li><a href="#">써브웨이</a></li>
-          <li><a href="#">가맹점</a></li>
-          <li><a href="#">온라인 주문</a></li>
-        </ul>
-      </nav>
-
-      <nav id="sub-menu">
-        <div id="sub-menu-container">
-          <ul class="sub-menu">
-            <li><a href="#">샌드위치</a></li>
-            <li><a href="#">랩</a></li>
-            <li><a href="#">찹샐러드</a></li>
-            <li><a href="#">스마일 썹</a></li>
-            <li><a href="#">단체메뉴</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">써브웨이 이용방법</a></li>
-            <li><a href="#">단체메뉴 이용방법</a></li>
-            <li><a href="#">신선한 재료 소개</a></li>
-            <li><a href="#">App 이용방법</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">이벤트·프로모션</a></li>
-            <li><a href="#">뉴스·공지사항</a></li>
-            <li><a href="#">광고영상</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">써브웨이 역사</a></li>
-            <li><a href="#">써브웨이 약속</a></li>
-            <li><a href="#">샌드위치 아티스트 지원</a></li>
-            <li><a href="#">매장찾기</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">써브웨이 프랜차이즈</a></li>
-            <li><a href="#">가맹관련 FAQ</a></li>
-            <li><a href="#">가맹신청·문의</a></li>
-            <li><a href="#">지사안내</a></li>
-            <li><a href="#">사업설명회</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">FAST-SUB</a></li>
-            <li><a href="#">HOME-SUB</a></li>
-            <li><a href="#">단체주문</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <main id="main">
-      <h1 class="sub-title">회원가입</h1>
-      <div class="join-step">
-        <ul>
-          <li><img src="../images/join/step1.png" alt="스텝1" width="80"></li>
-          <li><img src="../images/join/yellow_dot.png" alt="노란점선" width="80"></li>
-          <li><img src="../images/join/step2.png" alt="스텝2" width="80"></li>
-          <li><img src="../images/join/gray_dot.png" alt="회색점선" width="80"></li>
-          <li><img src="../images/join/step3.png" alt="스텝3" width="80"></li>
-          <li><img src="../images/join/gray_dot.png" alt="회색점선" width="80"></li>
-          <li><img src="../images/join/step4.png" alt="스텝4" width="80"></li>
-        </ul>
-      </div>
-
-      <div class="join-title">
-        Step3. <strong>정보입력</strong>
-      </div>
-      <form action="join_step4.html">
-        <div class="join">
-          <div id="basic-info">
-            <h2 class="info-subtitle">기본 정보(필수 입력)</h2>
-            <dl>
-              <dt>
-                <label for="user-email">아이디(이메일) <span class="required">*</span> </label>
-              </dt>
-              <dd>
-                <input type="text" id="user-email" class="email" placeholder="이메일 아이디 입력"> 
-                @ 
-                <input type="text" id="user-domain" class="email-domain" placeholder="이메일 도메인 입력">
-                <select class="select-domain"></select>
-                <button type="button" id="overlap-chk-btn">중복확인</button>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for="chk-user-email">아이디(이메일)확인 <span class="required">*</span> </label>
-              </dt>
-              <dd>
-                <input type="text" id="chk-user-email" class="email" placeholder="이메일 아이디 입력"> 
-                @ 
-                <input type="text" id="chk-user-domain" class="email-domain" placeholder="이메일 도메인 입력">
-                <select class="select-domain"></select>
-                <span id="txt"></span>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for="user-pw">비밀번호 <span class="required">*</span> </label>
-              </dt>
-              <dd>
-                <input type="password" id="user-pw" class="user-pw" placeholder="비밀번호입력">
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for="chk-user-pw">비밀번호 확인 <span class="required">*</span> </label>
-              </dt>
-              <dd>
-                <input type="password" id="chk-user-pw" class="user-pw" placeholder="비밀번호입력">
-              </dd>
-            </dl>
-          </div>
-          <div id="add-info">
-            <h2 class="info-subtitle">추가 정보(선택 입력)</h2>
-            <dl>
-              <dt>
-                <label for="user-zipcode">우편번호</label>
-              </dt>
-              <dd>
-                <input type="text" id="user-zipcode" placeholder="000000">
-                <button type="button">우편번호검색</button>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for="user-address">주소</label>
-              </dt>
-              <dd>
-                <input type="text" id="user-address" class="adr" placeholder="주소입력"> 
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                <label for="user-detail-address">상세주소</label>
-              </dt>
-              <dd>
-                <input type="text" id="user-detail-address" class="adr" placeholder="상세주소입력">
-              </dd>
-            </dl>
-          </div>
-        </div> <!-- div.join -->
-        <div class="btn-area">
-          <button type="button" class="complete-btn">
-            회원가입완료
-            <img src="../images/join/yellow_checkbox.png" alt="체크아이콘" width="25">
-          </button>
-        </div> <!-- div.btn-area -->
-      </form>
-    </main>
-
-    <footer id="footer">
-      <ul id="footer-terms">
-        <li><a href="#">이용약관</a></li>
-        <li><a href="#">개인정보처리방침</a></li>
-        <li><a href="#">써브카드</a></li>
-        <li><a href="#">점주관리자</a></li>
-        <li><a href="#">Subway Listens</a></li>
+      </div> <!-- div#sign-up -->
+    </div>
+    <nav id="gnb">
+      <ul id="main-menu">
+        <li><a href="#">메뉴소개</a></li>
+        <li><a href="#">이용방법</a></li>
+        <li><a href="#">새소식</a></li>
+        <li><a href="#">써브웨이</a></li>
+        <li><a href="#">가맹점</a></li>
+        <li><a href="#">온라인 주문</a></li>
       </ul>
-      <div id="footer-bottom">
-        <ul id="footer-corp-info">
-          <li>서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 콜린클락 | 전화 : 02-797-5036 | 사업자 등록번호 : 101-84-04143</li>
-          <li>SUBWAY® is a Registered Trademark of Subway IP LLC. &copy; 2019 Subway IP LLC. All Rights Reserved. </li>
+    </nav> 
+    <nav id="sub-menu">
+      <div id="sub-menu-container">
+        <ul class="sub-menu">
+          <li><a href="#">샌드위치</a></li>
+          <li><a href="#">랩</a></li>
+          <li><a href="#">찹샐러드</a></li>
+          <li><a href="#">스마일 썹</a></li>
+          <li><a href="#">단체메뉴</a></li>
         </ul>
-        <div id="sns">
-          <a href="#">
-            <img src="../images/index/instagram.png" alt="인스타그램">
-          </a>
-          <a href="#">
-            <img src="../images/index/facebook.png" alt="페이스북">
-          </a>
-        </div>
+        <ul class="sub-menu">
+          <li><a href="#">써브웨이 이용방법</a></li>
+          <li><a href="#">단체메뉴 이용방법</a></li>
+          <li><a href="#">신선한 재료 소개</a></li>
+          <li><a href="#">App 이용방법</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">이벤트·프로모션</a></li>
+          <li><a href="#">뉴스·공지사항</a></li>
+          <li><a href="#">광고영상</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">써브웨이 역사</a></li>
+          <li><a href="#">써브웨이 약속</a></li>
+          <li><a href="#">샌드위치 아티스트 지원</a></li>
+          <li><a href="#">매장찾기</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">써브웨이 프랜차이즈</a></li>
+          <li><a href="#">가맹관련 FAQ</a></li>
+          <li><a href="asset/pages/join_member.html">가맹신청·문의</a></li>
+          <li><a href="#">지사안내</a></li>
+          <li><a href="#">사업설명회</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">FAST-SUB</a></li>
+          <li><a href="#">HOME-SUB</a></li>
+          <li><a href="#">단체주문</a></li>
+        </ul>
       </div>
-    </footer>
-  </div> <!-- div#wrap -->
+    </nav>
+  </header>
+  <hr>
+  <main id="main">
+    <h1 class="sub-title">회원가입</h1>
+    <div class="join-step">
+      <ul>
+        <li><img src="../images/join/step1.png" alt="스텝1" width="80"></li>
+        <li><img src="../images/join/yellow_dot.png" alt="노란점선" width="80"></li>
+        <li><img src="../images/join/step2.png" alt="스텝2" width="80"></li>
+        <li><img src="../images/join/gray_dot.png" alt="회색점선" width="80"></li>
+        <li><img src="../images/join/step3.png" alt="스텝3" width="80"></li>
+        <li><img src="../images/join/gray_dot.png" alt="회색점선" width="80"></li>
+        <li><img src="../images/join/step4.png" alt="스텝4" width="80"></li>
+      </ul>
+    </div>
+
+    <div class="join-title">
+      Step3. <strong>정보입력</strong>
+    </div>
+    <form action="join_step4.html">
+      <div class="join">
+        <div id="basic-info">
+          <h2 class="info-subtitle">기본 정보(필수 입력)</h2>
+          <dl>
+            <dt>
+              <label for="user-email">아이디(이메일) <span class="required">*</span> </label>
+            </dt>
+            <dd>
+              <input type="text" id="user-email" class="email" placeholder="이메일 아이디 입력"> 
+              @ 
+              <input type="text" id="user-domain" class="email-domain" placeholder="이메일 도메인 입력">
+              <select class="select-domain"></select>
+              <button type="button" id="overlap-chk-btn">중복확인</button>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label for="chk-user-email">아이디(이메일)확인 <span class="required">*</span> </label>
+            </dt>
+            <dd>
+              <input type="text" id="chk-user-email" class="email" placeholder="이메일 아이디 입력"> 
+              @ 
+              <input type="text" id="chk-user-domain" class="email-domain" placeholder="이메일 도메인 입력">
+              <select class="select-domain"></select>
+              <span id="txt"></span>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label for="user-pw">비밀번호 <span class="required">*</span> </label>
+            </dt>
+            <dd>
+              <input type="password" id="user-pw" class="user-pw" placeholder="비밀번호입력">
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label for="chk-user-pw">비밀번호 확인 <span class="required">*</span> </label>
+            </dt>
+            <dd>
+              <input type="password" id="chk-user-pw" class="user-pw" placeholder="비밀번호입력">
+            </dd>
+          </dl>
+        </div>
+        <div id="add-info">
+          <h2 class="info-subtitle">추가 정보(선택 입력)</h2>
+          <dl>
+            <dt>
+              <label for="user-zipcode">우편번호</label>
+            </dt>
+            <dd>
+              <input type="text" id="user-zipcode" placeholder="000000">
+              <button type="button">우편번호검색</button>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label for="user-address">주소</label>
+            </dt>
+            <dd>
+              <input type="text" id="user-address" class="adr" placeholder="주소입력"> 
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <label for="user-detail-address">상세주소</label>
+            </dt>
+            <dd>
+              <input type="text" id="user-detail-address" class="adr" placeholder="상세주소입력">
+            </dd>
+          </dl>
+        </div>
+      </div> <!-- div.join -->
+      <div class="btn-area">
+        <button type="button" class="complete-btn">
+          회원가입완료
+          <img src="../images/join/yellow_checkbox.png" alt="체크아이콘" width="25">
+        </button>
+      </div> <!-- div.btn-area -->
+    </form>
+  </main>
+
+  <footer id="footer">
+    <ul id="footer-terms">
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">써브카드</a></li>
+      <li><a href="#">점주관리자</a></li>
+      <li><a href="#">Subway Listens</a></li>
+    </ul>
+    <hr>
+    <div id="footer-bottom">
+      <ul id="footer-corp-info">
+        <li>서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 콜린클락 | 전화 : 02-797-5036 | 사업자 등록번호 : 101-84-04143</li>
+        <li>SUBWAY® is a Registered Trademark of Subway IP LLC. &copy; 2019 Subway IP LLC. All Rights Reserved. </li>
+      </ul>
+      <div id="sns">
+        <a href="#">
+          <img src="../images/index/instagram.png" alt="인스타그램">
+        </a>
+        <a href="#">
+          <img src="../images/index/facebook.png" alt="페이스북">
+        </a>
+      </div>
+    </div>
+  </footer>
   <div class="modal-layer-popup-bg">
     <div class="modal-layer-frame">
       <div class="modal-layer-popup">

@@ -14,210 +14,210 @@
 </head>
 
 <body>
-  <div id="wrap">
-    <header id="header">
+  <header id="header">
+    <div id="header-logo-signup">
       <div id="header-logo">
         <a href="../../index.html">
           <img src="../images/index/header_logo.png" alt="헤더로고">
-        </a>
+      </a>  
       </div> <!-- div#header-logo -->
       <div id="sign-up">
         <ul>
           <li>
-            <a href="login.html">
+            <a href="../pages/login.html">
               로그인
             </a>
-          </li>
+        </li>
           <li>
-            <a href="join_step1.html">
+            <a href="../pages/join_step1.html">
               회원가입
             </a>
-          </li>
+        </li>
           <li>
             <a href="#">
               <img src="../images/index/earth.jpg" alt="지구" width="24">
             </a>
-          </li>
+        </li>
         </ul>
       </div> <!-- div#sign-up -->
-      <nav id="gnb">
-        <ul id="main-menu">
-          <li><a href="#">메뉴소개</a></li>
-          <li><a href="#">이용방법</a></li>
-          <li><a href="#">새소식</a></li>
-          <li><a href="#">써브웨이</a></li>
-          <li><a href="#">가맹점</a></li>
-          <li><a href="#">온라인 주문</a></li>
-        </ul>
-      </nav> <!-- nav#gnb -->
-
-      <nav id="sub-menu">
-        <div id="sub-menu-container">
-          <ul class="sub-menu">
-            <li><a href="#">샌드위치</a></li>
-            <li><a href="#">랩</a></li>
-            <li><a href="#">찹샐러드</a></li>
-            <li><a href="#">스마일 썹</a></li>
-            <li><a href="#">단체메뉴</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">써브웨이 이용방법</a></li>
-            <li><a href="#">단체메뉴 이용방법</a></li>
-            <li><a href="#">신선한 재료 소개</a></li>
-            <li><a href="#">App 이용방법</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">이벤트·프로모션</a></li>
-            <li><a href="#">뉴스·공지사항</a></li>
-            <li><a href="#">광고영상</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">써브웨이 역사</a></li>
-            <li><a href="#">써브웨이 약속</a></li>
-            <li><a href="#">샌드위치 아티스트 지원</a></li>
-            <li><a href="#">매장찾기</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">써브웨이 프랜차이즈</a></li>
-            <li><a href="#">가맹관련 FAQ</a></li>
-            <li><a href="#">가맹신청·문의</a></li>
-            <li><a href="#">지사안내</a></li>
-            <li><a href="#">사업설명회</a></li>
-          </ul>
-          <ul class="sub-menu">
-            <li><a href="#">FAST-SUB</a></li>
-            <li><a href="#">HOME-SUB</a></li>
-            <li><a href="#">단체주문</a></li>
-          </ul>
-        </div> <!-- div#sub-menu-container -->
-      </nav> <!-- nav#sub-menu -->
-    </header> <!-- header#header -->
-
-    <main id="main">
-      <h1 id="title">장바구니</h1>
-      <div id="order-area">
-        <div class="order-way">
-          <a href="#" id="fast-sub">FAST-SUB</a><a href="#" id="home-sub">HOME-SUB</a>
-        </div> <!-- div.order-way -->
-        <dl class="order-place">
-          <dt>픽업매장</dt>
-          <dd>
-            <strong>부천상동점(경기도 부천시 상동로 87 가나베스트타운 103호)</strong>
-            <button>변경</button>
-          </dd>
-        </dl>
-        <div id="within-14">
-          <span>!</span>최근 14일 이내 담은 상품만 확인 가능합니다.
-        </div>
-        <div id="select-delete">
-          <label class="chkbox">
-            <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" onclick="fnAllChk()">
-            <span class="checkmark"></span>
-            <strong>전체선택</strong>
-          </label>
-          <button type="button" id="delete-btn">선택삭제</button>
-        </div>
-        <div class="order-info-container">
-          <div class="menu-info">
-            <div class="menu-content">
-              <label class="chkbox">
-                <input type="checkbox" name="checkbox" class="select-chkbox">
-                <span class="checkmark select-checkmark"></span>
-                <strong>쉬림프</strong>
-              </label>
-              <p>15cm, 위트(토스팅), 모차렐라치즈, 양상추, 토마토, 오이, 피망, 양파, 레드와인식초, 올리브오일</p>
-              <div class="price">5700</div>
-            </div>
-            <img src="../images/sandwich/premium/shrimp.jpg" alt="" class="order-image" width="348">
-          </div> <!-- div.menu-info -->
-          <div class="add-order">
-            <div class="add-order-content">
-              <span class="add">추가</span>
-              <span class="add-content">화이트 초코 마카다미아 쿠키/ 탄산음료 16oz</span>
-            </div> <!-- div.add-order-content -->
-            <div class="add-order-price">1900</div> <!-- div.add-order-price -->
-          </div> <!-- div.add-order -->
-          <div class="order-total">
-            <div class="order-count">
-              수량
-              <button type="button" class="minus-btn">－</button>
-              <input type="text" class="order-num" value="1">
-              <button type="button" class="plus-btn">＋</button>
-            </div> <!-- div.order-count -->
-            <div class="order-sum">
-              총 주문금액
-              <span class="sum"></span>
-            </div> <!-- div.order-sum -->
-          </div> <!-- div.order-total -->
-        </div> <!-- div.order-info-container -->
-
-        <div class="order-info-container">
-          <div class="menu-info">
-            <div class="menu-content">
-              <label class="chkbox">
-                <input type="checkbox" name="checkbox" class="select-chkbox">
-                <span class="checkmark select-checkmark"></span>
-                <strong>에그마요</strong>
-              </label>
-              <p>15cm, 위트(토스팅), 모차렐라치즈, 양상추, 토마토, 오이, 피망, 양파, 레드와인식초, 올리브오일</p>
-              <div class="price">4300</div>
-            </div>
-            <img src="../images/sandwich/classic/egg_mayo.jpg" alt="" class="order-image" width="348">
-          </div> <!-- div.menu-info -->
-          <div class="order-total">
-            <div class="order-count">
-              수량
-              <button type="button" class="minus-btn">－</button>
-              <input type="text" class="order-num" value="1">
-              <button type="button" class="plus-btn">＋</button>
-            </div> <!-- div.order-count -->
-            <div class="order-sum">
-              총 주문금액
-              <span class="sum"></span>
-            </div> <!-- div.order-sum -->
-          </div> <!-- div.order-total -->
-        </div> <!-- div.order-info-container -->
-        <div class="last-order-check">
-          <div class="last-order-sum">
-            최종 결제 금액
-            <span id="last-sum"></span>
-          </div> <!-- div.last-order-sum -->
-          <div class="last-order-btn-area">
-            <button type="button" id="add-menu-btn">메뉴추가하기</button>
-            <button type="button" id="order-btn">
-              주문하기
-              <img src="../images/join/yellow_checkbox.png" alt="체크마크">
-            </button>
-          </div>
-        </div>
-
-      </div> <!-- div#order-area -->
-    </main> <!-- main#main -->
-
-    <footer id="footer">
-      <ul id="footer-terms">
-        <li><a href="#">이용약관</a></li>
-        <li><a href="#">개인정보처리방침</a></li>
-        <li><a href="#">써브카드</a></li>
-        <li><a href="#">점주관리자</a></li>
-        <li><a href="#">Subway Listens</a></li>
+    </div>
+    <nav id="gnb">
+      <ul id="main-menu">
+        <li><a href="#">메뉴소개</a></li>
+        <li><a href="#">이용방법</a></li>
+        <li><a href="#">새소식</a></li>
+        <li><a href="#">써브웨이</a></li>
+        <li><a href="#">가맹점</a></li>
+        <li><a href="#">온라인 주문</a></li>
       </ul>
-      <div id="footer-bottom">
-        <ul id="footer-corp-info">
-          <li>서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 콜린클락 | 전화 : 02-797-5036 | 사업자 등록번호 : 101-84-04143</li>
-          <li>SUBWAY® is a Registered Trademark of Subway IP LLC. &copy; 2019 Subway IP LLC. All Rights Reserved. </li>
+    </nav> 
+    <nav id="sub-menu">
+      <div id="sub-menu-container">
+        <ul class="sub-menu">
+          <li><a href="#">샌드위치</a></li>
+          <li><a href="#">랩</a></li>
+          <li><a href="#">찹샐러드</a></li>
+          <li><a href="#">스마일 썹</a></li>
+          <li><a href="#">단체메뉴</a></li>
         </ul>
-        <div id="sns">
-          <a href="#">
-            <img src="../images/index/instagram.png" alt="인스타그램">
-          </a>
-          <a href="#">
-            <img src="../images/index/facebook.png" alt="페이스북">
-          </a>
-        </div> <!-- div#sns -->
-      </div> <!-- div#footer-bottom -->
-    </footer> <!-- footer#footer -->
-  </div> <!-- div#wrap -->
+        <ul class="sub-menu">
+          <li><a href="#">써브웨이 이용방법</a></li>
+          <li><a href="#">단체메뉴 이용방법</a></li>
+          <li><a href="#">신선한 재료 소개</a></li>
+          <li><a href="#">App 이용방법</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">이벤트·프로모션</a></li>
+          <li><a href="#">뉴스·공지사항</a></li>
+          <li><a href="#">광고영상</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">써브웨이 역사</a></li>
+          <li><a href="#">써브웨이 약속</a></li>
+          <li><a href="#">샌드위치 아티스트 지원</a></li>
+          <li><a href="#">매장찾기</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">써브웨이 프랜차이즈</a></li>
+          <li><a href="#">가맹관련 FAQ</a></li>
+          <li><a href="asset/pages/join_member.html">가맹신청·문의</a></li>
+          <li><a href="#">지사안내</a></li>
+          <li><a href="#">사업설명회</a></li>
+        </ul>
+        <ul class="sub-menu">
+          <li><a href="#">FAST-SUB</a></li>
+          <li><a href="#">HOME-SUB</a></li>
+          <li><a href="#">단체주문</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <hr>
+
+  <main id="main">
+    <h1 id="title">장바구니</h1>
+    <div id="order-area">
+      <div class="order-way">
+        <a href="#" id="fast-sub">FAST-SUB</a><a href="#" id="home-sub">HOME-SUB</a>
+      </div> <!-- div.order-way -->
+      <dl class="order-place">
+        <dt>픽업매장</dt>
+        <dd>
+          <strong>부천상동점(경기도 부천시 상동로 87 가나베스트타운 103호)</strong>
+          <button>변경</button>
+        </dd>
+      </dl>
+      <div id="within-14">
+        <span>!</span>최근 14일 이내 담은 상품만 확인 가능합니다.
+      </div>
+      <div id="select-delete">
+        <label class="chkbox">
+          <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" onclick="fnAllChk()">
+          <span class="checkmark"></span>
+          <strong>전체선택</strong>
+        </label>
+        <button type="button" id="delete-btn">선택삭제</button>
+      </div>
+      <div class="order-info-container">
+        <div class="menu-info">
+          <div class="menu-content">
+            <label class="chkbox">
+              <input type="checkbox" name="checkbox" class="select-chkbox">
+              <span class="checkmark select-checkmark"></span>
+              <strong>쉬림프</strong>
+            </label>
+            <p>15cm, 위트(토스팅), 모차렐라치즈, 양상추, 토마토, 오이, 피망, 양파, 레드와인식초, 올리브오일</p>
+            <div class="price">5700</div>
+          </div>
+          <img src="../images/sandwich/premium/shrimp.jpg" alt="" class="order-image" width="348">
+        </div> <!-- div.menu-info -->
+        <div class="add-order">
+          <div class="add-order-content">
+            <span class="add">추가</span>
+            <span class="add-content">화이트 초코 마카다미아 쿠키/ 탄산음료 16oz</span>
+          </div> <!-- div.add-order-content -->
+          <div class="add-order-price">1900</div> <!-- div.add-order-price -->
+        </div> <!-- div.add-order -->
+        <div class="order-total">
+          <div class="order-count">
+            수량
+            <button type="button" class="minus-btn">－</button>
+            <input type="text" class="order-num" value="1">
+            <button type="button" class="plus-btn">＋</button>
+          </div> <!-- div.order-count -->
+          <div class="order-sum">
+            총 주문금액
+            <span class="sum"></span>
+          </div> <!-- div.order-sum -->
+        </div> <!-- div.order-total -->
+      </div> <!-- div.order-info-container -->
+
+      <div class="order-info-container">
+        <div class="menu-info">
+          <div class="menu-content">
+            <label class="chkbox">
+              <input type="checkbox" name="checkbox" class="select-chkbox">
+              <span class="checkmark select-checkmark"></span>
+              <strong>에그마요</strong>
+            </label>
+            <p>15cm, 위트(토스팅), 모차렐라치즈, 양상추, 토마토, 오이, 피망, 양파, 레드와인식초, 올리브오일</p>
+            <div class="price">4300</div>
+          </div>
+          <img src="../images/sandwich/classic/egg_mayo.jpg" alt="" class="order-image" width="348">
+        </div> <!-- div.menu-info -->
+        <div class="order-total">
+          <div class="order-count">
+            수량
+            <button type="button" class="minus-btn">－</button>
+            <input type="text" class="order-num" value="1">
+            <button type="button" class="plus-btn">＋</button>
+          </div> <!-- div.order-count -->
+          <div class="order-sum">
+            총 주문금액
+            <span class="sum"></span>
+          </div> <!-- div.order-sum -->
+        </div> <!-- div.order-total -->
+      </div> <!-- div.order-info-container -->
+      <div class="last-order-check">
+        <div class="last-order-sum">
+          최종 결제 금액
+          <span id="last-sum"></span>
+        </div> <!-- div.last-order-sum -->
+        <div class="last-order-btn-area">
+          <button type="button" id="add-menu-btn">메뉴추가하기</button>
+          <button type="button" id="order-btn">
+            주문하기
+            <img src="../images/join/yellow_checkbox.png" alt="체크마크">
+          </button>
+        </div>
+      </div>
+
+    </div> <!-- div#order-area -->
+  </main> <!-- main#main -->
+  <footer id="footer">
+    <ul id="footer-terms">
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">써브카드</a></li>
+      <li><a href="#">점주관리자</a></li>
+      <li><a href="#">Subway Listens</a></li>
+    </ul>
+    <hr>
+    <div id="footer-bottom">
+      <ul id="footer-corp-info">
+        <li>서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 콜린클락 | 전화 : 02-797-5036 | 사업자 등록번호 : 101-84-04143</li>
+        <li>SUBWAY® is a Registered Trademark of Subway IP LLC. &copy; 2019 Subway IP LLC. All Rights Reserved. </li>
+      </ul>
+      <div id="sns">
+        <a href="#">
+          <img src="../images/index/instagram.png" alt="인스타그램">
+        </a>
+        <a href="#">
+          <img src="../images/index/facebook.png" alt="페이스북">
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

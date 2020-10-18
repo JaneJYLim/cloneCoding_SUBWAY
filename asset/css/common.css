@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  min-width: 1120px;
+  border-top: 4px solid #009223;
+}
+
+header, footer {
+  font-family: 'Kanit', sans-serif;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -19,6 +29,11 @@ ul {
   list-style: none;
 }
 
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #ddd;
+}
 
 select {
   -webkit-appearance: none;
@@ -30,44 +45,44 @@ select {
   background-size: 30px 30px;
 }
 
-div#wrap {
-  width: 1920px;
-  margin: 0 auto;
-}
 
 /* header#header 영역 시작 */
 header#header {
+  width: 1280px;
   height: 164px;
-  border-top: 4px solid #009223;
-  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+#header-logo-signup {
   position: relative;
 }
 
-#header #header-logo {
-  width: 1920px;
+#header-logo-signup #header-logo {
+  width: 1020px;
   height: 90px;
+  margin: 0 auto;
   text-align: center;
 }
 
-#header #header-logo img {
+#header-logo-signup #header-logo img {
   margin-top: 26px;
 }
 
-#header #sign-up {
+#header-logo-signup #sign-up {
   width: 180px;
   font-size: 13px;
   font-weight: bold;
   position: absolute;
-  right: 370px;
+  right: 40px;
   top: 38px;
 }
 
-#header #sign-up ul li {
+#header-logo-signup #sign-up ul li {
   float: left;
 
 }
 
-#header #sign-up ul li a {
+#header-logo-signup #sign-up ul li a {
   height: 24px;
   color: #444;
   line-height: 24px;
@@ -75,19 +90,13 @@ header#header {
   display: inline-block;
 }
 
-#header #sign-up ul li:nth-child(2)::before {
+#header-logo-signup #sign-up ul li:nth-child(2)::before {
   content: "";
   clear: both;
   display: block;
 }
 
-#header #gnb {
-  width: 100%;
-  height: 70px;
-}
-
 #gnb #main-menu {
-  width: 1020px;
   text-align: center;
   margin: 0 auto;
   display: flex;
@@ -113,18 +122,20 @@ header#header {
 }
 
 #sub-menu {
-  width: 1920px;
+  width: 100%;
   height: 250px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   position: absolute;
+  left: 0;
   z-index: 2;
+  transform: translateY(5px);
   display: none;
 }
 
 #sub-menu #sub-menu-container {
-  width: 1020px;
+  width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -201,7 +212,6 @@ header#header {
   height: 80px;
   color: #333;
   font-size: 44px;
-  font-family: 'Kanit', sans-serif;
   line-height: 80px;
   position: relative;
   top: -80px;
@@ -215,15 +225,22 @@ header#header {
 /* footer#footer 영역 시작 */
 
 footer#footer {
-  width: 100%;
+  /* width: 100%; */
   height: 150px;
   background-color: #292929;
 }
 
 #footer #footer-terms {
+  width: 1280px;
+  padding-left: 10px;
   display: flex;
-  padding-left: 330px;
-  border-bottom: 1px solid #666;
+  margin: 0 auto;
+}
+
+#footer hr {
+  height: 1px;
+  border: 0;
+  background-color: #666;
 }
 
 #footer #footer-terms li:nth-child(2)>a {
