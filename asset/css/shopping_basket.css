@@ -369,7 +369,7 @@ dl.order-place dd button{
   display: inline-block;
 }
 
-.last-order-check {
+.total-order-check {
   height: 130px;
   line-height: 130px;
   padding: 0 100px;
@@ -378,13 +378,13 @@ dl.order-place dd button{
   justify-content: space-between;
 }
 
-.last-order-check .last-order-sum {
+.total-order-check .total-order-sum {
   font-size: 24px;
   font-weight: bold;
   display: flex;
 }
 
-.last-order-sum #last-sum {
+.total-order-sum #total-sum {
   color: #009500;
   font-size: 40px;
   font-weight: bold;
@@ -392,7 +392,7 @@ dl.order-place dd button{
   margin-left: 10px;
 }
 
-.last-order-sum #last-sum::after {
+.total-order-sum #total-sum::after {
   content: "원";
   clear: both;
   font-size: 22px;
@@ -400,7 +400,7 @@ dl.order-place dd button{
   display: inline-block;
 }
 
-.last-order-check .last-order-btn-area button{
+.total-order-check .total-order-btn-area button{
   width: 170px;
   height: 50px;
   font-size: 18px;
@@ -409,14 +409,14 @@ dl.order-place dd button{
   
 }
 
-.last-order-check .last-order-btn-area #add-menu-btn{
+.total-order-check .total-order-btn-area #add-menu-btn{
   color: #009500;
   border: 2px solid #009500;
   border-radius: 30px; 
   background-color: #fff;
 }
 
-.last-order-check .last-order-btn-area #order-btn{
+.total-order-check .total-order-btn-area #order-btn{
   color: #ffffff;
   border: 2px solid #009500;
   border-radius: 30px;

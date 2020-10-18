@@ -93,10 +93,9 @@
     </nav>
   </header>
   <hr>
-
   <main id="main">
     <h1 id="title">장바구니</h1>
-    <div id="order-area">
+    <section id="order-area">
       <div class="order-way">
         <a href="#" id="fast-sub">FAST-SUB</a><a href="#" id="home-sub">HOME-SUB</a>
       </div> <!-- div.order-way -->
@@ -109,20 +108,20 @@
       </dl>
       <div id="within-14">
         <span>!</span>최근 14일 이내 담은 상품만 확인 가능합니다.
-      </div>
+      </div> <!-- div#within-14 -->
       <div id="select-delete">
         <label class="chkbox">
-          <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" onclick="fnAllChk()">
+          <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" checked="checked" onclick="fnAllChk()">
           <span class="checkmark"></span>
           <strong>전체선택</strong>
         </label>
         <button type="button" id="delete-btn">선택삭제</button>
-      </div>
-      <div class="order-info-container">
+      </div> <!-- div#select-delete -->
+      <section class="order-info-container">
         <div class="menu-info">
           <div class="menu-content">
             <label class="chkbox">
-              <input type="checkbox" name="checkbox" class="select-chkbox">
+              <input type="checkbox" name="checkbox" class="select-chkbox" checked="checked" onclick="fnReverseChk()">
               <span class="checkmark select-checkmark"></span>
               <strong>쉬림프</strong>
             </label>
@@ -150,13 +149,13 @@
             <span class="sum"></span>
           </div> <!-- div.order-sum -->
         </div> <!-- div.order-total -->
-      </div> <!-- div.order-info-container -->
+      </section> <!-- section.order-info-container -->
 
-      <div class="order-info-container">
+      <section class="order-info-container">
         <div class="menu-info">
           <div class="menu-content">
             <label class="chkbox">
-              <input type="checkbox" name="checkbox" class="select-chkbox">
+              <input type="checkbox" name="checkbox" class="select-chkbox" checked="checked" onclick="fnReverseChk()">
               <span class="checkmark select-checkmark"></span>
               <strong>에그마요</strong>
             </label>
@@ -177,22 +176,22 @@
             <span class="sum"></span>
           </div> <!-- div.order-sum -->
         </div> <!-- div.order-total -->
-      </div> <!-- div.order-info-container -->
-      <div class="last-order-check">
-        <div class="last-order-sum">
+      </section> <!-- section.order-info-container -->
+      <section class="total-order-check">
+        <div class="total-order-sum">
           최종 결제 금액
-          <span id="last-sum"></span>
-        </div> <!-- div.last-order-sum -->
-        <div class="last-order-btn-area">
+          <span id="total-sum"></span>
+        </div> <!-- div.total-order-sum -->
+        <div class="total-order-btn-area">
           <button type="button" id="add-menu-btn">메뉴추가하기</button>
           <button type="button" id="order-btn">
             주문하기
             <img src="../images/join/yellow_checkbox.png" alt="체크마크">
           </button>
         </div>
-      </div>
+      </section>
 
-    </div> <!-- div#order-area -->
+    </section> <!-- section#order-area -->
   </main> <!-- main#main -->
   <footer id="footer">
     <ul id="footer-terms">

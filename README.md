@@ -2,13 +2,12 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.16
+작성일자 : 2020.10.18
 
 구현한 내용 :
 
 ### shopping_basket.html
-    1. shopping_basket 수량 증감
-    2. 주문가격 구현
+    1. 수량 증감에 따른 최종 결제 금액 구현
 
 # 
 
@@ -35,6 +34,3 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 
 ### join_step3.html
     1. 스텝 이미지 변경
-
-### shopping_basket.html
-    1. 수량에 따른 가격 변동
