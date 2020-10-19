@@ -13,6 +13,9 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 ### join_step1.html
     1. 필수 체크박스 checked시 다음버튼 변경 구현
 
+### join_step3.html
+    1. 스텝 이미지 변경
+
 # 
 
 수정해야할 내용 :
@@ -28,6 +31,3 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 ### find-shop.html
     1. lnb sticky
     2. 지도 넣기
-
-### join_step3.html
-    1. 스텝 이미지 변경

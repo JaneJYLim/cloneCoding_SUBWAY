@@ -105,7 +105,7 @@ header#header {
 
 #gnb #main-menu li a {
   width: 160px;
-  height: 70px;
+  height: 75px;
   line-height: 70px;
   font-size: 18px;
   font-weight: bold;
@@ -130,7 +130,6 @@ header#header {
   position: absolute;
   left: 0;
   z-index: 2;
-  transform: translateY(5px);
   display: none;
 }
 
@@ -141,14 +140,10 @@ header#header {
   justify-content: center;
 }
 
-#sub-menu .sub-menu {
-  margin-top: 14px;
-}
-
 .sub-menu li a {
   width: 160px;
-  height: 36px;
-  line-height: 36px;
+  height: 40px;
+  line-height: 40px;
   color: #888;
   font-size: 14px;
   text-align: center;
