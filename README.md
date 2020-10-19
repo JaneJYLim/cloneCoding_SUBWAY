@@ -10,6 +10,9 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
     1. 연락처에 숫자 이외의 문자 입력시 바로 제거
     2. 이메일(양쪽 모두)에 가능한 문자 이외의 내용 입력시 바로 제거
 
+### join_step1.html
+    1. 필수 체크박스 checked시 다음버튼 변경 구현
+
 # 
 
 수정해야할 내용 :
@@ -21,9 +24,6 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
     2. section#subway-menu
       - subway메뉴 화살표 버튼 구현
       - 각각의 슬라이드 버튼 클릭 시, 슬라이드 구현
-
-### join_step1.html
-    1. 필수 체크박스 checked시 다음버튼 변경 구현
 
 ### find-shop.html
     1. lnb sticky

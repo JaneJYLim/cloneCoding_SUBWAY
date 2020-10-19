@@ -1,5 +1,7 @@
 //전체동의 시작
 
+
+
 function fnAllChk() {
   let chkVal = document.querySelector("#all-agree").checked;
   let chkBox = document.querySelectorAll(".agree-chkbox");
@@ -60,13 +62,21 @@ function fnChooseReverseChk() {
 
 //선택 전체동의 끝
 
-let homepageAgree = document.querySelector("#homepage-agree").checked;
-let personalAgree = document.querySelector("#personal-agree").checked;
-let subcardAgree = document.querySelector("#subcard-agree").checked;
-
-if (homepageAgree&&personalAgree&&subcardAgree) {
-  document.querySelector("#nextBtn>img").classList.add(when-all-checked);
-}
+//필수동의 체크 시, 버튼 CSS 변경
+  
+  $(".agree-chkbox").on("change", function(){
+    let homepageAgree = document.querySelector("#homepage-agree").checked;
+    let personalAgree = document.querySelector("#personal-agree").checked;
+    let subcardAgree = document.querySelector("#subcard-agree").checked;
+  if (homepageAgree&&personalAgree&&subcardAgree) {
+    document.querySelector(".nextBtn").style.backgroundColor="#009500";
+    document.querySelector(".nextBtn").style.color="#ffffff";
+  }
+  else {
+    document.querySelector(".nextBtn").style.backgroundColor="#ffffff";
+    document.querySelector(".nextBtn").style.color="#009500";
+  }
+})
 
 
 //유효성 검사
@@ -81,7 +91,11 @@ function fnValidation() {
 
   if (homepageAgree == false || personalAgree == false || subcardAgree == false) {
     alert("필수항목을 체크해주세요");
-  } else {
+  } 
+  else {
     frm.submit();
   }
 }
+
+
+

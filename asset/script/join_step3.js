@@ -41,6 +41,7 @@ for(let i = 0; i < selectDomain.length; i++) {
 //이메일 중복확인
 let overlapCnt = 0;
 let overlapChkBtn = document.querySelector("#overlap-chk-btn");
+
 overlapChkBtn.addEventListener("click", function(){
   document.querySelector(".modal-layer-popup-bg").style.display="block";
   overlapCnt++;
@@ -48,14 +49,15 @@ overlapChkBtn.addEventListener("click", function(){
 
 //이메일 중복확인 후 닫기
 let chkBtn = document.querySelector(".modal-chk-btn");
+
 chkBtn.addEventListener("click", function() {
   document.querySelector(".modal-layer-popup-bg").style.display="none";
 })
 
 //유효성 검사
 let completeBtn = document.querySelector(".complete-btn");
-completeBtn.addEventListener("click", fnSubmit); 
-function fnSubmit() {
+
+completeBtn.addEventListener("click", function(){
   let userEmail = document.querySelector("#user-email").value;
   let userDomain = document.querySelector("#user-domain").value;
   let chkUserEmail = document.querySelector("#chk-user-email").value;
@@ -63,8 +65,9 @@ function fnSubmit() {
   let userPw = document.querySelector("#user-pw").value;
   let chkUserPw = document.querySelector("#chk-uesr-pw");
   let txt = document.querySelectorAll(".txt");
-  if (userEmail == "" || userDomain == "" || chkUserEmail == "" || chkUserDomain == "" 
-  || (userEmail !== chkUserEmail) || (userDomain !== chkUserDomain)) {
+  let frm = document.querySelector("form");
+  if (!userEmail || !userDomain || !chkUserEmail || !chkUserDomain 
+    || (userEmail !== chkUserEmail) || (userDomain !== chkUserDomain)) {
     txt[0].innerHTML = "이메일이 잘못 입력되었습니다. 이메일 <br>아이디 혹은 도메인을 다시 확인해주세요";
     txt[1].innerHTML = "";
   }
@@ -75,8 +78,14 @@ function fnSubmit() {
     txt[0].innerHTML = "";
     txt[1].innerHTML = "비밀번호가 잘못 입력되었습니다. <br>비밀번호를 확인해주세요";
   }
+  else {
+    frm.submit();
+  }
 
-}
+}); 
+
+
+
 
 //아이디(이메일)에 숫자와 영어만 입력 가능
 let chkEmail = document.querySelectorAll(".email");
