@@ -75,6 +75,6 @@ function totalPrice() {
   totalSum.innerHTML = totalPrice;
 }
 
-  totalPrice();
+totalPrice();
 
-  // 갯수, 수량관련 끝
+// 갯수, 수량관련 끝

@@ -141,13 +141,14 @@ dl dd select {
   border: 1px solid #ddd;
 }
 
-#txt {
-  font-size: 12px;
+.txt {
   color: #f00;
+  font-size: 12px;
+  text-align: right;
   line-height: 20px;
   position: absolute;
-  top: 5px;
-  right: 20px;
+  top: 14px;
+  right: 6px;
 }
 
 #basic-info .user-pw {

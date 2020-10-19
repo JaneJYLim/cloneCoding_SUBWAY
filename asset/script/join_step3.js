@@ -51,7 +51,7 @@ chkBtn.addEventListener("click", function() {
 })
 
 //유효성 검사
-/* let completeBtn = document.querySelector(".complete-btn");
+let completeBtn = document.querySelector(".complete-btn");
 completeBtn.addEventListener("click", fnSubmit); 
 function fnSubmit() {
   let userEmail = document.querySelector("#user-email").value;
@@ -60,16 +60,46 @@ function fnSubmit() {
   let chkUserDomain = document.querySelector("#chk-user-domain").value;
 
   let userPw = document.querySelector("#user-pw").value;
-  let chkUserPw = document.querySelector("#chk-uesr-pw").value;
+  let chkUserPw = document.querySelector("#chk-uesr-pw");
 
-  let txt = document.querySelector("#txt");
+  let txt = document.querySelectorAll(".txt");
 
   if (userEmail == "" || userDomain == "" || chkUserEmail == "" || chkUserDomain == "" 
   || (userEmail !== chkUserEmail) || (userDomain !== chkUserDomain)) {
-    txt.innerHTML = "이메일이 잘못 입력되었습니다. <br>이메일 아이디 혹은 도메인을 <br>다시 확인해주세요";
+    txt[0].innerHTML = "이메일이 잘못 입력되었습니다. 이메일 <br>아이디 혹은 도메인을 다시 확인해주세요";
+    txt[1].innerHTML = "";
   }
   else if (userPw == "" || chkUserPw == "") {
-    alert("OK");
+    txt[0].innerHTML = "";
+    txt[1].innerHTML = "비밀번호가 잘못 입력되었습니다. <br>비밀번호를 확인해주세요";
   }
 
-} */
+}
+
+//아이디(이메일)에 숫자와 영어만 입력 가능
+let chkEmail = document.querySelectorAll(".email");
+for (let i = 0; i < chkEmail.length; i++) {
+  chkEmail[i].addEventListener("keyup", function() {
+    let engNumReg = /[^A-Z|a-z|0-9]/;
+    let hgScReg = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣|~!@#$%^&*()+|<>?:{}]/g;
+    if (engNumReg.test(chkEmail[i].value)) {
+      chkEmail[i].value = chkEmail[i].value.replace(hgScReg,"");
+    }
+  });
+  
+}
+
+//도메인에 영어와 .만 입력 가능
+let chkDomain = document.querySelectorAll(".email-domain");
+for (let j = 0; j < chkDomain.length; j++) {
+  chkDomain[j].addEventListener("keyup", function() {
+    let engReg = /[^A-Z|a-z]/;
+    let hgScReg = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣|0-9|~!@#$%^&*()+|<>?:{}]/g;
+    if (engReg.test(chkDomain[j].value)) {
+      // console.log(engReg.test(chkDomain[j].value));
+      chkDomain[j].value = chkDomain[j].value.replace(hgScReg,"");
+    }
+  });
+  
+}
+
