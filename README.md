@@ -2,12 +2,13 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.18
+작성일자 : 2020.10.19
 
 구현한 내용 :
 
-### shopping_basket.html
-    1. 수량 증감에 따른 최종 결제 금액 구현
+### join_member.html
+    1. 연락처에 숫자 이외의 문자 입력시 바로 제거
+    2. 이메일(양쪽 모두)에 가능한 문자 이외의 내용 입력시 바로 제거
 
 # 
 
@@ -27,10 +28,6 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 ### find-shop.html
     1. lnb sticky
     2. 지도 넣기
-
-### join_member.html
-    1. 연락처에 숫자 이외의 문자 입력시 바로 제거
-    2. 이메일(양쪽 모두)에 가능한 문자 이외의 내용 입력시 바로 제거
 
 ### join_step3.html
     1. 스텝 이미지 변경
