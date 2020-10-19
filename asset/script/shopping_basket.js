@@ -24,12 +24,12 @@ function fnReverseChk() {
 
 
 //수량, 가격 관련 시작
-const minusBtn = document.querySelectorAll(".minus-btn");
-const orderNum = document.querySelectorAll(".order-num");
-const plusBtn = document.querySelectorAll(".plus-btn");
-const price = document.querySelectorAll(".price");
-const addOrderPrice = document.querySelectorAll(".add-order-price");
-const sum = document.querySelectorAll(".sum");
+let minusBtn = document.querySelectorAll(".minus-btn");
+let orderNum = document.querySelectorAll(".order-num");
+let plusBtn = document.querySelectorAll(".plus-btn");
+let price = document.querySelectorAll(".price");
+let addOrderPrice = document.querySelectorAll(".add-order-price");
+let sum = document.querySelectorAll(".sum");
 
 
 //마이너스 버튼 클릭 시 수량 감소
@@ -64,17 +64,36 @@ function totalPrice() {
   let totalPrice = 0;
   
   for (let i = 0; i < sum.length; i++) {
+    console.log(typeof price[i].innerHTML);
+    console.log(price[i].innerHTML);
     if (addOrderPrice[i] == undefined) {
       sum[i].innerHTML = parseInt(price[i].innerHTML) * orderNum[i].value;
+      console.log("1 " + sum[i].innerHTML, price[i].innerHTML, orderNum[i].value);
     }
     else {
       sum[i].innerHTML = (parseInt(price[i].innerHTML) + parseInt(addOrderPrice[i].innerHTML)) * orderNum[i].value;
-    }
+      console.log("2 " + sum[i].innerHTML, price[i].innerHTML, orderNum[i].value);
+    }  
     totalPrice +=  parseInt(sum[i].innerHTML);
   }
-  totalSum.innerHTML = totalPrice;
+  totalPrice = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  totalSum.innerHTML = totalPrice; //천단위마다 "," 찍어주기
+  // fnComma();
 }
-
 totalPrice();
-
 // 갯수, 수량관련 끝
+
+
+//숫자 , 찍어주기
+// function fnComma() {
+//   for (let i = 0; i < price.length; i++) {
+//     price[i].innerHTML = price[i].innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     sum[i].innerHTML = sum[i].innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     if (addOrderPrice[i] == undefined) {
+//       continue;
+//     }
+//     else {
+//       addOrderPrice[i].innerHTML = addOrderPrice[i].innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//     }      
+//   }
+// }
