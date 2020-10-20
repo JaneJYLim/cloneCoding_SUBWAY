@@ -17,6 +17,10 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 
 ### join_member.html
     1. 가맹문의 팝업 위치 변경 top: 30%
+
+### shopping_basket.html
+    1. checked 유무에 따른 가격 조절
+
 # 
 
 
