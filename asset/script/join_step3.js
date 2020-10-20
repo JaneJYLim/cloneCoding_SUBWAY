@@ -54,6 +54,24 @@ chkBtn.addEventListener("click", function() {
   document.querySelector(".modal-layer-popup-bg").style.display="none";
 })
 
+//눈 아이콘 클릭시 비밀번호 확인 가능
+let changePwIcon = document.querySelectorAll(".far");
+for(let i = 0; i < changePwIcon.length; i++) {
+  changePwIcon[i].addEventListener("click", function() {
+    let userPw = document.querySelectorAll(".user-pw");
+    let userPwAttr = userPw[i].getAttribute("type");
+    if(userPwAttr == "password") {
+      userPw[i].setAttribute("type", "text");
+      changePwIcon[i].classList.add("farToggle");
+    } 
+    else if (userPwAttr == "text") {
+      userPw[i].setAttribute("type", "password");
+      changePwIcon[i].classList.remove("farToggle");
+    }
+  }
+)}
+
+
 //유효성 검사
 let completeBtn = document.querySelector(".complete-btn");
 
@@ -63,28 +81,29 @@ completeBtn.addEventListener("click", function(){
   let chkUserEmail = document.querySelector("#chk-user-email").value;
   let chkUserDomain = document.querySelector("#chk-user-domain").value;
   let userPw = document.querySelector("#user-pw").value;
-  let chkUserPw = document.querySelector("#chk-uesr-pw");
+  let chkUserPw = document.querySelector("#chk-user-pw").value;
   let txt = document.querySelectorAll(".txt");
   let frm = document.querySelector("form");
   if (!userEmail || !userDomain || !chkUserEmail || !chkUserDomain 
     || (userEmail !== chkUserEmail) || (userDomain !== chkUserDomain)) {
-    txt[0].innerHTML = "이메일이 잘못 입력되었습니다. 이메일 <br>아이디 혹은 도메인을 다시 확인해주세요";
-    txt[1].innerHTML = "";
+      txt[0].innerHTML = "이메일이 잘못 입력되었습니다. 이메일 <br>아이디 혹은 도메인을 다시 확인해주세요";
+      txt[1].innerHTML = "";
+      document.querySelector("#user-email").focus();
   }
   else if (overlapCnt == 0) {
     txt[0].innerHTML = "중복확인을 하지 않았습니다. <br>중복확인을 실행해주세요";
+    overlapChkBtn.focus();
   }
-  else if (userPw == "" || chkUserPw == "") {
+  else if (userPw == "" || chkUserPw == "" || userPw !== chkUserPw)  {
     txt[0].innerHTML = "";
     txt[1].innerHTML = "비밀번호가 잘못 입력되었습니다. <br>비밀번호를 확인해주세요";
+    document.querySelector("#chk-user-pw").focus();
   }
   else {
     frm.submit();
   }
 
 }); 
-
-
 
 
 //아이디(이메일)에 숫자와 영어만 입력 가능

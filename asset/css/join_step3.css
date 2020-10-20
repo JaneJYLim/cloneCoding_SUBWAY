@@ -120,6 +120,7 @@ dl dd input {
   padding-left: 10px;
   border: none;
   margin: 0 10px;
+  outline: none;
 }
 
 dl dd input::placeholder {
@@ -152,7 +153,15 @@ dl dd select {
 }
 
 #basic-info .user-pw {
-  width: 235px;
+  width: 550px;
+}
+
+#basic-info .far {
+  color: #dddddd;
+  vertical-align: middle;
+}
+.farToggle {
+  color: #888888 !important;
 }
 
 #add-info .info-subtitle {

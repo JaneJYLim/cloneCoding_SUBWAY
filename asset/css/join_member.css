@@ -414,7 +414,7 @@
   border-radius: 20px;
   background-color: rgba(0,149,0,0.8);
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%,-50%);
 }

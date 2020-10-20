@@ -152,8 +152,11 @@ section#subway-menu {
 
 .subway-menu-slide .subway-menu-slide-shuttle-frame {
   width: 2600px;
+  background-color: #ffffff;
   display: flex;
   position: absolute;
+
+  transition: all 1s ease;
 }
 .subway-menu-slide #classic-subway-menu-slide-shuttle-frame {
   margin-left: 0;

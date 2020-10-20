@@ -111,7 +111,7 @@
       </div> <!-- div#within-14 -->
       <div id="select-delete">
         <label class="chkbox">
-          <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" checked="checked" onclick="fnAllChk()">
+          <input type="checkbox" name="select-all" id="select-all" class="select-all-chkbox" data-totalPrice="0" checked="checked" onclick="fnAllChk()">
           <span class="checkmark"></span>
           <strong>전체선택</strong>
         </label>
@@ -121,7 +121,7 @@
         <div class="menu-info">
           <div class="menu-content">
             <label class="chkbox">
-              <input type="checkbox" name="checkbox" class="select-chkbox" checked="checked" onclick="fnReverseChk()">
+              <input type="checkbox" name="checkbox" class="select-chkbox" data-price="0" checked="checked" onclick="fnReverseChk()">
               <span class="checkmark select-checkmark"></span>
               <strong>쉬림프</strong>
             </label>
@@ -146,7 +146,7 @@
           </div> <!-- div.order-count -->
           <div class="order-sum">
             총 주문금액
-            <span class="sum"></span>
+            <span class="sum" data-sum="0"></span>
           </div> <!-- div.order-sum -->
         </div> <!-- div.order-total -->
       </section> <!-- section.order-info-container -->
@@ -155,7 +155,7 @@
         <div class="menu-info">
           <div class="menu-content">
             <label class="chkbox">
-              <input type="checkbox" name="checkbox" class="select-chkbox" checked="checked" onclick="fnReverseChk()">
+              <input type="checkbox" name="checkbox" class="select-chkbox" data-price="0" checked="checked" onclick="fnReverseChk()">
               <span class="checkmark select-checkmark"></span>
               <strong>에그마요</strong>
             </label>
@@ -173,14 +173,14 @@
           </div> <!-- div.order-count -->
           <div class="order-sum">
             총 주문금액
-            <span class="sum"></span>
+            <span class="sum" data-sum="0"></span>
           </div> <!-- div.order-sum -->
         </div> <!-- div.order-total -->
       </section> <!-- section.order-info-container -->
       <section class="total-order-check">
         <div class="total-order-sum">
           최종 결제 금액
-          <span id="total-sum"></span>
+          <span id="total-sum" data-totalPrice></span>
         </div> <!-- div.total-order-sum -->
         <div class="total-order-btn-area">
           <button type="button" id="add-menu-btn">메뉴추가하기</button>

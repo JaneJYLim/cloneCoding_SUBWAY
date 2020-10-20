@@ -14,7 +14,8 @@ function fnReverseChk() {
   for (let i = 0; i < chkbox.length; i++) {
     if (chkbox[0].checked && chkbox[1].checked) {
       document.querySelector("#select-all").checked = true;
-    } else {
+    } 
+    else {
       document.querySelector("#select-all").checked = false;
     }
   }
@@ -22,6 +23,32 @@ function fnReverseChk() {
 
 //전체동의 끝
 
+//선택 삭제
+let deleteBtn = document.querySelector("#delete-btn");
+deleteBtn.addEventListener("click", deleteChecked);
+
+function deleteChecked() {
+  if (confirm ("선택한 상품을 삭제하시겠습니까?")) {
+    let selectChkbox = document.querySelectorAll(".select-chkbox");
+    let orderInfoContainer = document.querySelectorAll(".order-info-container");
+    for (let i = 0; i < selectChkbox.length; i++) {
+      if (!selectChkbox[0].checked && !selectChkbox[1].checked) {
+        alert("삭제할 상품을 선택해주세요.");
+        return;
+      }
+      else if (selectChkbox[0].checked && selectChkbox[1].checked){
+        $(orderInfoContainer[0]).remove();
+        $(orderInfoContainer[1]).remove();
+      }
+      else if (selectChkbox[0].checked) {
+        $(orderInfoContainer[0]).remove();
+      }
+      else if (selectChkbox[1].checked) {
+        $(orderInfoContainer[1]).remove();
+      }
+    }
+  }
+}
 
 //수량, 가격 관련 시작
 let minusBtn = document.querySelectorAll(".minus-btn");
@@ -37,11 +64,12 @@ for (let i = 0; i < minusBtn.length; i++) {
   minusBtn[i].addEventListener("click", function() {
     if (orderNum[i].value > 1) {
       orderNum[i].value--;
-    } else {
+    } 
+    else {
       alert("최소수량은 1개입니다.");
       orderNum[i].value = 1;
     }
-    totalPrice();
+    fnTotalPrice();
   });    
 };
 
@@ -50,50 +78,75 @@ for (let i = 0; i < plusBtn.length; i++) {
   plusBtn[i].addEventListener("click", function() {
     if (orderNum[i].value < 99) {
       orderNum[i].value++;
-    } else {
+    } 
+    else {
       alert("최대수량은 99개입니다.");
       orderNum[i].value = 99;
     }
-    totalPrice();
+    fnTotalPrice();
   });    
-  };
+};
+
+//선택해제에 따른 가격 조절 시작
+//선택해제시, 가격 조절
+function fnPriceChk() {
+  let selectChkbox = document.querySelectorAll(".select-chkbox");
+  let sum = document.querySelectorAll(".sum");
+  let totalSum = document.querySelector("#total-sum");
+  for (let i = 0; i < selectChkbox.length; i++) {
+    selectChkbox[i].addEventListener("change", function() {
+      totalSum.innerHTML = 0;
+      if (selectChkbox[0].checked == false && selectChkbox[1].checked == false) {
+        return;
+      }
+      else if (selectChkbox[0].checked == false) {
+        totalSum.innerHTML = sum[1].innerHTML;
+      }
+      else if (selectChkbox[1].checked == false) {
+        totalSum.innerHTML = sum[0].innerHTML;
+      }
+      else if (selectChkbox[0].checked && selectChkbox[1].checked) {
+        totalSum.innerHTML = parseInt(sum[0].innerHTML) + parseInt(sum[1].innerHTML);
+      }
+    })
+  }
+  //전체체크해제시, 가격 조절
+  let selectAll = document.querySelector("#select-all");
+    selectAll.addEventListener("change", function() {
+      if (selectAll.checked) {
+        fnTotalPrice();
+      }
+      else if (!selectAll.checked) {
+        totalSum.innerHTML = 0;
+      }
+  })
+}
+fnPriceChk();
+//선택해제에 따른 가격 조절 끝
 
 // 총 주문금액
-function totalPrice() {
-  let totalSum = document.querySelector("#total-sum");
-  let totalPrice = 0;
+function fnTotalPrice() {
   
+  let totalSum = document.querySelector("#total-sum");
+  let selectChkbox = document.querySelectorAll(".select-chkbox");
+  let totalPrice = 0;
   for (let i = 0; i < sum.length; i++) {
-    console.log(typeof price[i].innerHTML);
-    console.log(price[i].innerHTML);
     if (addOrderPrice[i] == undefined) {
-      sum[i].innerHTML = parseInt(price[i].innerHTML) * orderNum[i].value;
-      console.log("1 " + sum[i].innerHTML, price[i].innerHTML, orderNum[i].value);
+      selectChkbox[i].dataset.price =  parseInt(price[i].innerHTML) * orderNum[i].value;
+      sum[i].dataset.sum = selectChkbox[i].dataset.price;
+      sum[i].innerHTML = sum[i].dataset.sum;
     }
     else {
-      sum[i].innerHTML = (parseInt(price[i].innerHTML) + parseInt(addOrderPrice[i].innerHTML)) * orderNum[i].value;
-      console.log("2 " + sum[i].innerHTML, price[i].innerHTML, orderNum[i].value);
+      selectChkbox[i].dataset.price = (parseInt(price[i].innerHTML) + parseInt(addOrderPrice[i].innerHTML)) * orderNum[i].value;
+      sum[i].dataset.sum = selectChkbox[i].dataset.price;
+      sum[i].innerHTML = sum[i].dataset.sum;
     }  
-    totalPrice +=  parseInt(sum[i].innerHTML);
+    totalPrice += parseInt(sum[i].dataset.sum);
+
   }
-  totalPrice = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  totalSum.innerHTML = totalPrice; //천단위마다 "," 찍어주기
-  // fnComma();
+  totalSum.innerHTML = totalPrice;
+  totalSum.dataset.totalPrice = totalPrice;
 }
-totalPrice();
+fnTotalPrice();
 // 갯수, 수량관련 끝
-
-
-//숫자 , 찍어주기
-// function fnComma() {
-//   for (let i = 0; i < price.length; i++) {
-//     price[i].innerHTML = price[i].innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//     sum[i].innerHTML = sum[i].innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//     if (addOrderPrice[i] == undefined) {
-//       continue;
-//     }
-//     else {
-//       addOrderPrice[i].innerHTML = addOrderPrice[i].innerHTML.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//     }      
-//   }
-// }
+// totalPrice = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //콤마찍기

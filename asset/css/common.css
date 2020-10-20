@@ -287,3 +287,7 @@ footer#footer {
 }
 
 /* footer#footer 영역 끝 */
+
+header, nav, section, article, main, footer {
+  display: block;
+}
