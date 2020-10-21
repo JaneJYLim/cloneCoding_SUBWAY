@@ -13,12 +13,10 @@ var slider = tns({
     "❚❚"
   ],
 });
-
 //main 슬라이드 구현 끝
 
 //section.subway-menu 시작 
 //section.subway-menu gnb 클릭 시 해당 슬라이드 출현 시작
-
 const subway_menu_gnb = document.querySelectorAll("#subway-menu-gnb li a");
 const subway_menu_slide_shuttle_frame = document.querySelectorAll(".subway-menu-slide-shuttle-frame");
 for (let i = 0; i < subway_menu_gnb.length; i++) {
@@ -34,12 +32,7 @@ for (let i = 0; i < subway_menu_gnb.length; i++) {
 
   });
 }
-
 //section.subway-menu gnb 클릭 시 해당 슬라이드 출현 끝
-//버튼 클릭시 슬라이드 좌우 이동 시작
-
-
-//버튼 클릭시 슬라이드 좌우 이동 끝
 //이미지 hover시 css요소 변경 시작
 $(".subway-menu-slide-wrap a").mouseover(function () {
   $(this).children("img").addClass("scale-active");
@@ -56,13 +49,8 @@ $(".subway-menu-slide-wrap a").mouseout(function () {
     "display": "none"
   });
 })
-
-
 //이미지 hover시 css요소 변경 끝
 //section.subway-menu 끝
-
-
-//section#subway box4
 
 //section#subway box4 슬라이드 bx-btn 활성화 시작
 const section_pager = document.querySelectorAll(".section-bx-btn .bx-pager");
@@ -78,16 +66,7 @@ for (let i = 0; i < section_pager.length; i++) {
   })
 }
 //section#subway box4 슬라이드 bx-btn 활성화 끝
-
 //section#subway box4의 슬라이드 구현 시작
-const subway_box4_pager = document.querySelectorAll(".section-bx-btn .bx-pager");
-const subway_box4_slide_img = document.querySelectorAll("#subway-box4-slide-shuttle-frame img");
-for (let i = 0; i < subway_box4_pager.length; i++) {
-  subway_box4_pager[i].addEventListener("click", function () {
-
-  });
-}
-
 $(".section-bx-btn .bx-pager:first").click(function () {
   $("#subway-box4-slide-shuttle-frame img:first").fadeIn(200);
   $("#subway-box4-slide-shuttle-frame img:last").fadeOut(200);
@@ -101,4 +80,7 @@ $(".section-bx-btn .bx-pager:last").click(function () {
 //section#subway box4의 슬라이드 구현 끝
 
 
-//section#subway box4
+
+$(".subway-menu-slide-wrap a, #subway-box3-list a, #footer a").on("click", function(e) {
+  e.preventDefault();
+})

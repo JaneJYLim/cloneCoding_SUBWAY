@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.sub-menu:nth-child(3) li:nth-child(2) a{
+  color: #009223 !important;
+  text-decoration: underline !important;
+}
+
 #main {
   padding-bottom: 120px;
   
@@ -140,10 +145,12 @@ table {
 #news-info table td:nth-child(2) {
   width: 850px;
   text-align: left;
+  cursor: pointer;
 }
 
 #news-info table td:nth-child(2) strong{
   color: #009223;
+  cursor: pointer;
 }
 
 #news-info table td:last-child {

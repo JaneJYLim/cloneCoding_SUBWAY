@@ -5,6 +5,12 @@
   font-family: 'Noto Sans KR', sans-serif;
 
 }
+
+.sub-menu:last-child li:first-child a{
+  color: #009223 !important;
+  text-decoration: underline !important;
+}
+
 #main {
   width: 100%;
   text-align: center;

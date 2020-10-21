@@ -27,27 +27,32 @@ function fnReverseChk() {
 let deleteBtn = document.querySelector("#delete-btn");
 deleteBtn.addEventListener("click", deleteChecked);
 
+let selectChkbox = document.querySelectorAll(".select-chkbox");
+let orderInfoContainer = document.querySelectorAll(".order-info-container");
 function deleteChecked() {
   if (confirm ("선택한 상품을 삭제하시겠습니까?")) {
-    let selectChkbox = document.querySelectorAll(".select-chkbox");
-    let orderInfoContainer = document.querySelectorAll(".order-info-container");
     for (let i = 0; i < selectChkbox.length; i++) {
       if (!selectChkbox[0].checked && !selectChkbox[1].checked) {
         alert("삭제할 상품을 선택해주세요.");
         return;
       }
       else if (selectChkbox[0].checked && selectChkbox[1].checked){
-        $(orderInfoContainer[0]).remove();
-        $(orderInfoContainer[1]).remove();
+        orderInfoContainer.forEach(function(item) {
+          item.remove();
+        })
+        totalSum.innerHTML = 0;
       }
       else if (selectChkbox[0].checked) {
         $(orderInfoContainer[0]).remove();
+        totalSum.innerHTML = sum[1].dataset.sum;
       }
       else if (selectChkbox[1].checked) {
         $(orderInfoContainer[1]).remove();
+        totalSum.innerHTML = sum[0].dataset.sum;
       }
-    }
+    } 
   }
+
 }
 
 //수량, 가격 관련 시작
@@ -89,10 +94,9 @@ for (let i = 0; i < plusBtn.length; i++) {
 
 //선택해제에 따른 가격 조절 시작
 //선택해제시, 가격 조절
+let totalSum = document.querySelector("#total-sum");
 function fnPriceChk() {
-  let selectChkbox = document.querySelectorAll(".select-chkbox");
-  let sum = document.querySelectorAll(".sum");
-  let totalSum = document.querySelector("#total-sum");
+  
   for (let i = 0; i < selectChkbox.length; i++) {
     selectChkbox[i].addEventListener("change", function() {
       totalSum.innerHTML = 0;
@@ -100,13 +104,13 @@ function fnPriceChk() {
         return;
       }
       else if (selectChkbox[0].checked == false) {
-        totalSum.innerHTML = sum[1].innerHTML;
+        totalSum.innerHTML = sum[1].dataset.sum;
       }
       else if (selectChkbox[1].checked == false) {
-        totalSum.innerHTML = sum[0].innerHTML;
+        totalSum.innerHTML = sum[0].dataset.sum;
       }
       else if (selectChkbox[0].checked && selectChkbox[1].checked) {
-        totalSum.innerHTML = parseInt(sum[0].innerHTML) + parseInt(sum[1].innerHTML);
+        totalSum.innerHTML = parseInt(sum[0].dataset.sum) + parseInt(sum[1].dataset.sum);
       }
     })
   }
@@ -149,4 +153,5 @@ function fnTotalPrice() {
 }
 fnTotalPrice();
 // 갯수, 수량관련 끝
-// totalPrice = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //콤마찍기
+
+// totalSum.innerHTML = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //콤마찍기

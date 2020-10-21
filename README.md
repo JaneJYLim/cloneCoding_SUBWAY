@@ -2,24 +2,12 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.20
+작성일자 : 2020.10.21
 
 ### 구현한 내용 :
 
-### index.html
-    1. subway-menu 슬라이드 animation 구현
-
-### login.html 
-    1. 로그인 후 메인으로 화면 이동
-
-### join_step3.html
-    1. 정보입력 경고 띄울 시, focus 해주기
-
-### join_member.html
-    1. 가맹문의 팝업 위치 변경 top: 30%
-
 ### shopping_basket.html
-    1. checked 유무에 따른 가격 조절
+    1. 선택삭제, 전체삭제시 최종 결제 금액 변동
 
 # 
 
