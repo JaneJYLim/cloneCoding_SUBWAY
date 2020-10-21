@@ -4,6 +4,7 @@
 main#main {
   width: 100%;
   height: 490px;
+  text-align: center;
   position: relative;
 }
 
@@ -50,6 +51,14 @@ main#main {
   transition-duration: 0.3s;
 }
 
+.tns-item {
+  width: 100%;
+}
+
+.tns-item a{
+  width: 100%;
+  display: inline-block;
+}
 
   /* quick-link(매장찾기, 가맹신청문의) 영역 시작 */
 #quick-link {
@@ -272,6 +281,7 @@ section#subway {
   font-weight: bold;
   padding: 8px 20px;
   border: 2px solid #fff;
+  outline: none;
   background-color: rgba(255,255,255,0);
   border-radius: 20px;
 
@@ -370,6 +380,10 @@ section#subway {
   outline: none;
 
   cursor: pointer;
+}
+
+#subway-box3 #subway-box3-list #subway-box3-btn:hover{
+  color: #888888;
 }
 
 #subway #subway-box4 {

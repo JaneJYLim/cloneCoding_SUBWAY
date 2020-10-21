@@ -60,3 +60,20 @@ for(let i = 0; i < sub_menu.length; i++) {
 }
 
 // gnb와 submenu hover 연동 끝
+
+
+//Top scroll 
+$(document).ready(function() {
+  $(window).scroll(function() {
+    var topPos = $(this).scrollTop();
+    if (topPos >= 60) {
+      $(".topBtnArea").addClass("on");
+    }
+    else {
+      $(".topBtnArea").removeClass("on");
+    }
+  });
+  $(".topBtn").click(function() {
+    $(window).scrollTop(0);
+  })
+})

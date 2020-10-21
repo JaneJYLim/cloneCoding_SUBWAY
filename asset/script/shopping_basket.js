@@ -43,14 +43,18 @@ function deleteChecked() {
         totalSum.innerHTML = 0;
       }
       else if (selectChkbox[0].checked) {
-        $(orderInfoContainer[0]).remove();
+        $(orderInfoContainer[0]).detach();
         totalSum.innerHTML = sum[1].dataset.sum;
+        document.querySelector("#select-all").checked = true;
       }
       else if (selectChkbox[1].checked) {
-        $(orderInfoContainer[1]).remove();
+        $(orderInfoContainer[1]).detach();
         totalSum.innerHTML = sum[0].dataset.sum;
-      }
+        document.querySelector("#select-all").checked = true;
+      }      
     } 
+    fnAllChk();
+    fnReverseChk();
   }
 
 }

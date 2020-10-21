@@ -123,13 +123,14 @@ header#header {
 
 #sub-menu {
   width: 100%;
+  min-width: 1280px;
   height: 250px;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   position: absolute;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: none;
 }
 
@@ -287,6 +288,33 @@ footer#footer {
 }
 
 /* footer#footer 영역 끝 */
+
+.topBtnArea {
+  width: 55px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #009223;
+  
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+}
+
+.topBtnArea.on {
+  display: block;
+}
+
+.topBtnArea .topBtn{
+  color: #fff;
+  height: 50px;
+  font-weight: bold;
+  line-height: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 header, nav, section, article, main, footer {
   display: block;

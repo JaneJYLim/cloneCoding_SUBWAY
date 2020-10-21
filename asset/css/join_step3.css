@@ -95,7 +95,7 @@ dl dt, dl dd {
 }
 
 dl dt {
-  width: 160px;
+  width: 170px;
   height: 70px;
   font-weight: bold;
   line-height: 70px;
@@ -105,7 +105,7 @@ dl dt {
 }
 
 dl dd {
-  width: 806px;
+  width: 790px;
   height: 70px;
   line-height: 66px;
   padding: 0 10px;
@@ -135,7 +135,7 @@ dl dd select {
 }
 
 #basic-info .email, #basic-info .domain, #basic-info select {
-  width: 155px;
+  width: 145px;
 }
 
 #basic-info select {
@@ -173,7 +173,7 @@ dl dd select {
 }
 
 #add-info .adr {
-  width: 786px;
+  width: 750px;
 }
 
 .btn-area {

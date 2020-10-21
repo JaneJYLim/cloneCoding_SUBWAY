@@ -97,7 +97,7 @@ completeBtn.addEventListener("click", function(){
   else if (userPw == "" || chkUserPw == "" || userPw !== chkUserPw)  {
     txt[0].innerHTML = "";
     txt[1].innerHTML = "비밀번호가 잘못 입력되었습니다. <br>비밀번호를 확인해주세요";
-    document.querySelector("#chk-user-pw").focus();
+    document.querySelector("#user-pw").focus();
   }
   else {
     frm.submit();

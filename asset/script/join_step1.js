@@ -91,6 +91,7 @@ function fnValidation() {
 
   if (homepageAgree == false || personalAgree == false || subcardAgree == false) {
     alert("필수항목을 체크해주세요");
+    document.querySelector("#all-agree").focus();
   } 
   else {
     frm.submit();

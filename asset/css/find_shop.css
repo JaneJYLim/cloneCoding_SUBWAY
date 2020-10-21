@@ -302,6 +302,7 @@ table td:nth-child(5) .phone-num {
   color: #ccc;
   font-size: 18px;
   font-family: 'Sunflower', sans-serif;
+  cursor: pointer;
 }
 
 /* table 위치찾기 */
@@ -309,11 +310,12 @@ table td:last-child {
   width: 55px;
 }
 
-table td:last-child img {
+table td:last-child .search {
   width: 22px;
   padding: 4px;
   border-radius: 20px;
   background-color: #ddd;
+  cursor: pointer;
 }
 
 .pagenation {
