@@ -298,6 +298,90 @@ footer#footer {
 
 /* footer#footer 영역 끝 */
 
+/* 모달레이어 팝업창 영역 시작 */
+.modal-layer-popup-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+
+  display: none;
+}
+
+.modal-layer-popup-bg .modal-layer-frame{
+  width: 510px;
+  height: 530px;
+  padding: 20px 15px;
+  border-radius: 30px;
+  background-color: #ffc312;
+  
+  position:absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-layer-frame .modal-layer-popup {
+  width: 480px;
+  height: 490px;
+  border-radius: 30px;
+background-color: #fff;
+}
+
+.modal-layer-popup h1 {
+  width: 380px;
+  color: #009500;
+  font-weight: normal;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  border-bottom: 4px solid #009500;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.modal-layer-popup h1+div {
+  width: 380px;
+  height: 210px;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.modal-layer-popup h1+div img{
+  width: 68px;
+  height: 68px;
+  margin-bottom: 10px;
+}
+
+.modal-layer-popup h1+div p{
+  width: 290px;
+  height: 36px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.modal-layer-popup .btn-area {
+  width: 480px;
+}
+
+.modal-layer-popup .btn-area button {
+  width: 126px;
+  height: 50px;
+  color: #009500;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #009500;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+/* 모달레이어 팝업창 영역 끝 */
+
+/* topBtn 영역 시작*/
 .topBtnArea {
   width: 55px;
   height: 50px;
@@ -324,6 +408,8 @@ footer#footer {
   display: inline-block;
   cursor: pointer;
 }
+/* topBtn 영역 끝 */
+
 
 
 header, nav, section, article, main, footer {

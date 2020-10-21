@@ -84,3 +84,9 @@ $(".section-bx-btn .bx-pager:last").click(function () {
 $(".subway-menu-slide-wrap a, #subway-box3-list a, #footer a").on("click", function(e) {
   e.preventDefault();
 })
+
+// 로드시, 팝업창 구현 시작
+
+document.querySelector(".modal-chk-btn").addEventListener("click", function() {
+  document.querySelector(".modal-layer-popup-bg").style.display="none";
+})
