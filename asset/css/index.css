@@ -281,14 +281,11 @@ section#subway {
   font-weight: bold;
   padding: 8px 20px;
   border: 2px solid #fff;
-  outline: none;
   background-color: rgba(255,255,255,0);
   border-radius: 20px;
 
   position: absolute;
   bottom: 40px;
-
-  cursor: pointer;
 }
 
 #subway #subway-box1 {
@@ -377,9 +374,6 @@ section#subway {
   border: none;
   margin-top: 20px;
   background-color: rgba(255,255,255,0);
-  outline: none;
-
-  cursor: pointer;
 }
 
 #subway-box3 #subway-box3-list #subway-box3-btn:hover{

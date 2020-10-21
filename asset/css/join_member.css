@@ -380,10 +380,8 @@
   color: #009500;
   border: 2px solid#009500;
   border-radius: 30px;
-  outline: none;
   margin: 40px 0 60px;
   background: none;
-  cursor: pointer;
 }
 
 .btn-area .cancel-btn {
