@@ -24,6 +24,9 @@ https://janejylim.github.io/cloneCoding_SUBWAY/
 
 ### 수정해야할 내용 :
 
+### shopping_basket
+    1. 천단위 콤마 넣기
+
 ### find-shop 
     1. 지도 넣기
 
