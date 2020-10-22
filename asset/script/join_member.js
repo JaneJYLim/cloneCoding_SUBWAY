@@ -113,23 +113,7 @@ function selectDistrict() {
 }
 
 
-
-
-//첨부파일 확장자 체크
-let checkFile = document.querySelector("#file-input");
-checkFile.addEventListener("change", attachmentSubmit);
-
-function attachmentSubmit() {
-  let attachment = document.querySelector('#file-input').value;
-  attachment = attachment.slice(attachment.indexOf(".") + 1).toLowerCase();
-  
-  if (attachment !== "pdf" && attachment !== "docx" && attachment !== "pptx" && attachment !== "xlsx" && attachment !== "jpg" && attachment !== "gif" && attachment !== "png") {
-    alert("첨부가 불가능한 파일입니다.\n실행파일 또는 소스파일은 업로드 불가 입니다."); 
-  }
-  
-}
-
-//파일 선택 시 나타내주기
+//첨부파일 확장자 체크 및 파일 선택 시 나타내주기
 
 $(document).ready(function(){ 
   let fileTarget = $(".filebox #file-input"); 
@@ -142,6 +126,14 @@ $(document).ready(function(){
     } 
     // 추출한 파일명 삽입 
     $(this).siblings(".file-upload-name").val(filename); 
+
+  let attachment = document.querySelector('#file-input').value;
+  attachment = attachment.slice(attachment.indexOf(".") + 1).toLowerCase();
+  
+  if (attachment !== "pdf" && attachment !== "docx" && attachment !== "pptx" && attachment !== "xlsx" && attachment !== "jpg" && attachment !== "gif" && attachment !== "png") {
+    alert("첨부가 불가능한 파일입니다.\n실행파일 또는 소스파일은 업로드 불가 입니다."); 
+    $("#file-upload-name").val("");
+  }
   }); 
 });
 

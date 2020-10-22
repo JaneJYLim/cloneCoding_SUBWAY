@@ -21,12 +21,6 @@ for (let i = 0; i < sub_menu_a.length; i++) {
   });
 }
 
-// for(let i = 0; i < sub_menu.length; i++) {
-//   sub_menu[i].addEventListener("mouseover", function () {
-//     main_menu_a[i].style.color="#009223";
-//   })
-// }
-
 //submenu와  mainmenu연동
 for(let i = 0; i < sub_menu.length; i++) {
   $(sub_menu).eq(i).mouseover(function() {
@@ -60,7 +54,6 @@ for(let i = 0; i < sub_menu.length; i++) {
 }
 
 // gnb와 submenu hover 연동 끝
-
 
 //Top scroll 
 $(document).ready(function() {
