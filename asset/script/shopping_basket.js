@@ -44,12 +44,14 @@ function deleteChecked() {
       }
       else if (selectChkbox[0].checked) {
         $(orderInfoContainer[0]).detach();
-        totalSum.innerHTML = sum[1].dataset.sum;
+        totalPrice = sum[1].dataset.sum;
+        totalSum.innerHTML = sepComma(totalPrice.toString());
         document.querySelector("#select-all").checked = true;
       }
       else if (selectChkbox[1].checked) {
         $(orderInfoContainer[1]).detach();
-        totalSum.innerHTML = sum[0].dataset.sum;
+        totalPrice = sum[0].dataset.sum;
+        totalSum.innerHTML = sepComma(totalPrice.toString());
         document.querySelector("#select-all").checked = true;
       }      
     } 
@@ -66,7 +68,6 @@ let plusBtn = document.querySelectorAll(".plus-btn");
 let price = document.querySelectorAll(".price");
 let addOrderPrice = document.querySelectorAll(".add-order-price");
 let sum = document.querySelectorAll(".sum");
-
 
 //마이너스 버튼 클릭 시 수량 감소
 for (let i = 0; i < minusBtn.length; i++) {
@@ -96,6 +97,14 @@ for (let i = 0; i < plusBtn.length; i++) {
   });    
 };
 
+//수량 직접 변경시 가격 변동
+for(let i = 0; i < orderNum.length; i++) {
+  orderNum[i].addEventListener("focusout", function() {
+    fnTotalPrice();
+  })
+}
+
+
 //선택해제에 따른 가격 조절 시작
 //선택해제시, 가격 조절
 let totalSum = document.querySelector("#total-sum");
@@ -108,13 +117,21 @@ function fnPriceChk() {
         return;
       }
       else if (selectChkbox[0].checked == false) {
+        sum[1].dataset.sum = sepComma(sum[1].dataset.sum);
+        console.log(sum[1].dataset.sum);
         totalSum.innerHTML = sum[1].dataset.sum;
       }
       else if (selectChkbox[1].checked == false) {
+        sum[0].dataset.sum = sepComma(sum[0].dataset.sum);
         totalSum.innerHTML = sum[0].dataset.sum;
       }
       else if (selectChkbox[0].checked && selectChkbox[1].checked) {
-        totalSum.innerHTML = parseInt(sum[0].dataset.sum) + parseInt(sum[1].dataset.sum);
+        console.log(sum[0].dataset.sum);
+        console.log(sum[1].dataset.sum);
+        sum[0].dataset.sum = removeComma(sum[0].dataset.sum);
+        sum[1].dataset.sum = removeComma(sum[1].dataset.sum);
+        totalPrice = parseInt(sum[0].dataset.sum) + parseInt(sum[1].dataset.sum);
+        totalSum.innerHTML = sepComma(totalPrice.toString());
       }
     })
   }
@@ -139,23 +156,70 @@ function fnTotalPrice() {
   let selectChkbox = document.querySelectorAll(".select-chkbox");
   let totalPrice = 0;
   for (let i = 0; i < sum.length; i++) {
+    let price = document.querySelectorAll(".price");
+    let addOrderPrice = document.querySelectorAll(".add-order-price");
+
     if (addOrderPrice[i] == undefined) {
+
+      price[i].innerHTML = removeComma(price[i].innerHTML);
+      
       selectChkbox[i].dataset.price =  parseInt(price[i].innerHTML) * orderNum[i].value;
       sum[i].dataset.sum = selectChkbox[i].dataset.price;
+      sum[i].dataset.sum = sepComma(sum[i].dataset.sum);
       sum[i].innerHTML = sum[i].dataset.sum;
+
+      price[i].innerHTML = sepComma(price[i].innerHTML);
     }
     else {
+
+      price[i].innerHTML = removeComma(price[i].innerHTML);
+      addOrderPrice[i].innerHTML = removeComma(addOrderPrice[i].innerHTML);
+
       selectChkbox[i].dataset.price = (parseInt(price[i].innerHTML) + parseInt(addOrderPrice[i].innerHTML)) * orderNum[i].value;
       sum[i].dataset.sum = selectChkbox[i].dataset.price;
+      sum[i].dataset.sum = sepComma(sum[i].dataset.sum);
       sum[i].innerHTML = sum[i].dataset.sum;
+
+      price[i].innerHTML = sepComma(price[i].innerHTML);
+      addOrderPrice[i].innerHTML = sepComma(addOrderPrice[i].innerHTML);
     }  
+    sum[i].dataset.sum = removeComma(sum[i].dataset.sum);
     totalPrice += parseInt(sum[i].dataset.sum);
 
   }
+  totalPrice = sepComma(totalPrice.toString());
   totalSum.innerHTML = totalPrice;
   totalSum.dataset.totalPrice = totalPrice;
 }
 fnTotalPrice();
 // 갯수, 수량관련 끝
 
-// totalSum.innerHTML = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //콤마찍기
+
+/* 천단위 구분 쉼표 적용 시작 */
+
+//천단위 구분 함수
+function sepComma(inputMoney) {
+    var pattern = /\B(?=(\d{3})+(?!\d))/g;
+    var res = inputMoney.replace(pattern, ",");
+    
+    return res;
+}
+
+//천단위 구분 쉼표 제거 
+function removeComma(restore) {
+    if (restore.search(',')) {
+        arrComma = restore.split(',');
+        for (i = 0; ; i++) {
+            if (!arrComma[i]) break;
+
+            if (i == 0) {
+                restore = arrComma[i];
+            } else {
+                restore += arrComma[i];
+            }
+        }
+    }
+    return restore;
+}
+/* 천단위 구분 쉼표 적용 끝 */
+;
