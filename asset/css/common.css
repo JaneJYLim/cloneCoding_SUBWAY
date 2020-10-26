@@ -410,7 +410,12 @@ background-color: #fff;
 }
 /* topBtn 영역 끝 */
 
-
+.ui-datepicker-trigger {
+  width: 22px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
 
 header, nav, section, article, main, footer {
   display: block;

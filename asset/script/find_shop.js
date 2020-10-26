@@ -1,3 +1,69 @@
+//지도API 시작
+
+//지도 생성
+
+var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+var options = { //지도를 생성할 때 필요한 기본 옵션
+	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+	level: 3 //지도의 레벨(확대, 축소 정도)
+};
+
+var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+const COORDS = 'coords';
+
+// function getArea(lat, lng) {
+
+// }
+
+function saveCoords(coordsObj) {
+  localStorage.setItem(COORDS, JSON.stringify(coordsObj))
+}
+
+function handleGeoSuccess(position){
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  const coordsObj = {
+    latitude,
+    longitude
+  };
+  saveCoords(coordsObj);
+  // getArea(latitude, longitude);
+}
+
+function handleGeoError(){
+  console.log('error');
+}
+
+function askForCoords() {
+  navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+}
+
+//위치 받아오기
+
+function loadCoords() {
+  const loadedCoords = localStorage.getItem(COORDS);
+    if(loadedCoords === null){
+        askForCoords();
+    } else {
+    //getArea
+  }
+}
+
+loadCoords();
+
+
+
+
+
+
+
+
+
+
+
+
+//지도API 끝
 
 // 시/도 option 구현
 

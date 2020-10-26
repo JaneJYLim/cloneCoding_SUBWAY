@@ -2,13 +2,12 @@
 
 https://janejylim.github.io/cloneCoding_SUBWAY/
 
-작성일자 : 2020.10.23
+작성일자 : 2020.10.26
 
 ### 구현한 내용 :
 
-### shopping_basket
-    1. 천단위 콤마 넣기
-    2. 수량 직접 변경시 가격 변동
+### admin_bbs, admin_custom
+    1. 달력 jQuery UI 구현
 
 # 
 

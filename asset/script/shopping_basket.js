@@ -222,4 +222,3 @@ function removeComma(restore) {
     return restore;
 }
 /* 천단위 구분 쉼표 적용 끝 */
-;
